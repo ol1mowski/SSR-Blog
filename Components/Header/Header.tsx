@@ -1,7 +1,10 @@
 "use client";
 
+import img from "@/assets/logo-no-background.svg";
+
 import Link from "next/link";
 import s from "./Header.module.scss";
+import Image from "next/image";
 
 // import { useRef } from "react";
 
@@ -18,14 +21,8 @@ const Header = () => {
       <header className={s.header}>
         <section className={s.header__titleSection}>
           <Link href={"/"}>
-            <img
-              width="45"
-              height="45"
-              src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/programming-flag.png"
-              alt="programming-flag"
-            />
+            <Image src={img} alt="programming-flag" width={300} height={45} />{" "}
           </Link>
-          <h2 className={s.header__h2}>IT-Blog</h2>
         </section>
         <section className={s.header__navMenu}>
           <div className={s.header__navMenu__nav}>

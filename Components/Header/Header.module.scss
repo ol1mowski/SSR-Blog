@@ -6,9 +6,16 @@
   box-shadow: $box-shadow;
   @include d-flex;
   justify-content: space-between;
-  position: sticky;
-  z-index: 100;
-  top: 0;
+  width: 100vw;
+
+  background: linear-gradient(
+    90deg,
+    hsla(240, 45%, 89%, 1) 0%,
+    hsla(187, 100%, 89%, 1) 83%
+  );
+
+  transition: all 1s ease-in;
+
 
   @media screen and (min-width: $tablet) {
     padding-left: 2rem;
@@ -19,7 +26,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 1rem 7rem;
+    padding: 2rem 7rem;
   }
 
   &__hamburgerMenu {
@@ -62,12 +69,6 @@
           color: $white-color;
         }
       }
-      &__imgReact {
-        margin-left: 25vw;
-      }
-      &__imgJava {
-        margin-right: 25vw;
-      }
       &__items {
         color: $items-color;
         @include d-flex-column;
@@ -81,7 +82,7 @@
           @include items-will-hover;
           font-size: 2rem;
           font-weight: 500;
-          margin-bottom: .7rem;
+          margin-bottom: 0.7rem;
         }
         &__item:hover {
           @include items-hover-effect;
@@ -114,7 +115,6 @@
       scale: 1.3;
     }
     &__items {
-      color: $items-color;
       @include d-flex;
       list-style-type: none;
       @include header;
@@ -125,6 +125,7 @@
       &__item {
         @include items-will-hover;
         margin-right: 2rem;
+        color: $items-color;
       }
       &__item:hover {
         @include items-hover-effect;
@@ -132,9 +133,12 @@
     }
   }
 
-  &__titleSection {
+  &__logoSection {
     @include d-flex;
     gap: 1rem;
+    &__img {
+      padding-top: 0.5rem;
+    }
   }
 
   &__hamburgerSection {
@@ -148,11 +152,6 @@
       display: none;
     }
   }
-
-  &__h2 {
-    @include header;
-  }
-
   &__searchSection {
     position: fixed;
     backdrop-filter: blur(5px);
@@ -182,6 +181,9 @@
       }
     }
   }
+}
+.header:hover {
+  background: #d7d7f0c1;
 }
 
 @keyframes showMenu {

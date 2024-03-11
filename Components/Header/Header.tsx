@@ -1,5 +1,3 @@
-"use client";
-
 import img from "@/assets/logo-no-background.svg";
 
 import Link from "next/link";
@@ -19,37 +17,31 @@ const Header = () => {
   return (
     <>
       <header className={s.header}>
-        <section className={s.header__titleSection}>
+        <section className={s.header__logoSection}>
           <Link href={"/"}>
-            <Image src={img} alt="programming-flag" width={300} height={45} />{" "}
+            <Image
+              className={s.header__logoSection__img}
+              src={img}
+              alt="programming-flag"
+              width={190}
+              height={45}
+            />{" "}
           </Link>
         </section>
         <section className={s.header__navMenu}>
           <div className={s.header__navMenu__nav}>
             <ul className={s.header__navMenu__items}>
-              <Link
-                href={"/"}
-                className={s.header__navMenu__items__link_active}
-              >
+              <Link href={"/"}>
                 <li className={s.header__navMenu__items__item}>Home</li>
               </Link>{" "}
-              <Link
-                href={"/"}
-                className={s.header__navMenu__items__link_active}
-              >
-                <li className={s.header__navMenu__items__item}>Home</li>
+              <Link href={"/"}>
+                <li className={s.header__navMenu__items__item}>About Author</li>
               </Link>{" "}
-              <Link
-                href={"/"}
-                className={s.header__navMenu__items__link_active}
-              >
-                <li className={s.header__navMenu__items__item}>Home</li>
+              <Link href={"/"}>
+                <li className={s.header__navMenu__items__item}>Books for programmer</li>
               </Link>{" "}
-              <Link
-                href={"/"}
-                className={s.header__navMenu__items__link_active}
-              >
-                <li className={s.header__navMenu__items__item}>Home</li>
+              <Link href={"/"}>
+                <li className={s.header__navMenu__items__item}>Recomended courses</li>
               </Link>
             </ul>
           </div>

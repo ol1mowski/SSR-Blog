@@ -2,20 +2,13 @@
 
 .header {
   padding: 1rem 2rem;
-  background-color: $white-background-color;
+  background-color: $background-color;
   box-shadow: $box-shadow;
   @include d-flex;
   justify-content: space-between;
   width: 100vw;
 
-  background: linear-gradient(
-    90deg,
-    hsla(240, 45%, 89%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 83%
-  );
-
   transition: all 1s ease-in;
-
 
   @media screen and (min-width: $tablet) {
     padding-left: 2rem;

@@ -16,6 +16,11 @@ $error-red-fontColor: #650a0a;
 $category-no-found-color: #fff3cd;
 
 //background colors
+$background-color: linear-gradient(
+  90deg,
+  hsla(240, 45%, 89%, 1) 0%,
+  hsla(187, 100%, 89%, 1) 83%
+);
 $white-background-color: #f9f9f9;
 $nav-color: #fff;
 

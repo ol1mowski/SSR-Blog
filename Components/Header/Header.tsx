@@ -3,8 +3,7 @@ import img from "@/assets/logo-no-background.svg";
 import Link from "next/link";
 import s from "./Header.module.scss";
 import Image from "next/image";
-
-// import { useRef } from "react";
+import HamburgerLogo from "./HamburgerLogo/HamburgerLogo.component";
 
 // import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 // import SearchSetion from "./SearchSection/SearchSetion";
@@ -25,7 +24,8 @@ const Header = () => {
               alt="programming-flag"
               width={190}
               height={45}
-            />{" "}
+              priority
+            />
           </Link>
         </section>
         <section className={s.header__navMenu}>
@@ -38,28 +38,25 @@ const Header = () => {
                 <li className={s.header__navMenu__items__item}>About Author</li>
               </Link>{" "}
               <Link href={"/"}>
-                <li className={s.header__navMenu__items__item}>Books for programmer</li>
+                <li className={s.header__navMenu__items__item}>
+                  Books for programmer
+                </li>
               </Link>{" "}
               <Link href={"/"}>
-                <li className={s.header__navMenu__items__item}>Recomended courses</li>
+                <li className={s.header__navMenu__items__item}>
+                  Recomended courses
+                </li>
               </Link>
             </ul>
           </div>
         </section>
-        <section className={s.header__hamburgerSection}>
-          <img
-            width="45"
-            height="45"
-            src="https://img.icons8.com/nolan/64/1A6DFF/C822FF/menu-squared-2.png"
-            alt="menu-squared-2"
-          />
-        </section>
+        <HamburgerLogo />
 
         {/* Hamburger Menu */}
-        {/* 
-        <HamburgerMenu showHamburgerMenu={showHamburgerMenu} />
 
-        <SearchSetion /> */}
+        {/* <HamburgerMenu showHamburgerMenu={showHamburgerMenu} /> */}
+
+        {/* <SearchSetion /> */}
       </header>
     </>
   );

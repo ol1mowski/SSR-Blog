@@ -141,17 +141,6 @@
     }
   }
 
-  &__hamburgerSection {
-    cursor: pointer;
-
-    @media screen and (min-width: $tablet) {
-      margin-right: 2rem;
-    }
-
-    @media screen and (min-width: $big-tablets) {
-      display: none;
-    }
-  }
   &__searchSection {
     position: fixed;
     backdrop-filter: blur(5px);

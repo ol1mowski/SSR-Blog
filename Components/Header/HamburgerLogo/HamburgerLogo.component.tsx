@@ -3,15 +3,18 @@
 import s from "./HamburgerLogo.module.scss";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 
 import hamburger from "@/assets/hamburger.png";
+import HamburgerClickContext from "@/store/HamburgerClickContext";
 
 function HamburgerLogo() {
   const hamburgerSwitch = useRef<HTMLDivElement>(null);
 
+  const { setClick, isClick } = useContext(HamburgerClickContext);
+
   const hamburgerClickHandler = () => {
-    // console.log("clicked");
+    setClick(!isClick);
   };
 
   return (

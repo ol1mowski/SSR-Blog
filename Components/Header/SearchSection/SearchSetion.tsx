@@ -2,12 +2,13 @@ import { useContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import SearchComponent from "./SearchComponent/SearchComponent";
+import SearchCategoryContext from "@/store/SearchCategoryContext";
 
 const SearchSetion = () => {
 
   const navigate = useNavigate();
 
-  const { setSearchCategory } = useContext(SearchCategoryContext);
+  const { searchCategory} = useContext(SearchCategoryContext);
 
   const searchSection = useRef(null);
 

@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/Components/Header/Header";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
+import SearchCategoryContext from "@/store/SearchCategoryContext";
 import React, { useState } from "react";
 
 function Root({
@@ -9,18 +10,28 @@ function Root({
   children: React.ReactNode;
 }>) {
   const [click, setClick] = useState<boolean>(false);
+
+  const [category, setCategory] = useState<string | null>(null);
+
   return (
     <html lang="en">
       <body>
-        <HamburgerClickContext.Provider
+        <SearchCategoryContext.Provider
           value={{
-            isClick: click,
-            setClick: (click: boolean) => setClick(click),
+            searchCategory: category,
+            setSearchCategory: () => setCategory,
           }}
         >
-          <Header />
-          {children}
-        </HamburgerClickContext.Provider>
+          <HamburgerClickContext.Provider
+            value={{
+              isClick: click,
+              setClick: (click: boolean) => setClick(click),
+            }}
+          >
+            <Header />
+            {children}
+          </HamburgerClickContext.Provider>
+        </SearchCategoryContext.Provider>
       </body>
     </html>
   );

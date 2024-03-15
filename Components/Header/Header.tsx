@@ -7,6 +7,7 @@ import HamburgerLogo from "./HamburgerLogo/HamburgerLogo.component";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useContext } from "react";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
+import SearchSetion from "./SearchSection/SearchSetion";
 
 // import SearchSetion from "./SearchSection/SearchSetion";
 
@@ -60,7 +61,7 @@ const Header = () => {
 
         {isClick ? <HamburgerMenu /> : null}
 
-        {/* <SearchSetion /> */}
+        <SearchSetion />
       </header>
     </>
   );

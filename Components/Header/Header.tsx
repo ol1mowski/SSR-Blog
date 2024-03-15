@@ -4,6 +4,9 @@ import Link from "next/link";
 import s from "./Header.module.scss";
 import Image from "next/image";
 import HamburgerLogo from "./HamburgerLogo/HamburgerLogo.component";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+import { useContext } from "react";
+import HamburgerClickContext from "@/store/HamburgerClickContext";
 
 // import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 // import SearchSetion from "./SearchSection/SearchSetion";
@@ -12,6 +15,8 @@ const Header = () => {
   // const navigationSection = useRef(null);
 
   // const showHamburgerMenu = useRef(null);
+
+  const { isClick } = useContext(HamburgerClickContext);
 
   return (
     <>
@@ -54,7 +59,7 @@ const Header = () => {
 
         {/* Hamburger Menu */}
 
-        {/* <HamburgerMenu showHamburgerMenu={showHamburgerMenu} /> */}
+        {isClick ? <HamburgerMenu /> : null}
 
         {/* <SearchSetion /> */}
       </header>

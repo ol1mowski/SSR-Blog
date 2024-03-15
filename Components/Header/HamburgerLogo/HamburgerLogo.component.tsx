@@ -11,10 +11,10 @@ import HamburgerClickContext from "@/store/HamburgerClickContext";
 function HamburgerLogo() {
   const hamburgerSwitch = useRef<HTMLDivElement>(null);
 
-  const { setClick, isClick } = useContext(HamburgerClickContext);
+  const { setClick } = useContext(HamburgerClickContext);
 
   const hamburgerClickHandler = () => {
-    setClick(!isClick);
+    setClick(true);
   };
 
   return (

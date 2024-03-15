@@ -1,22 +1,16 @@
-import { useRef, useEffect } from "react";
-
+import { useRef, useEffect, useContext } from "react";
 import HamburgerMenuComponent from "./HamburgerMenuComponent/HamburgerMenuComponent";
+import HamburgerClickContext from "@/store/HamburgerClickContext";
 
-const HamburgerMenu = ({ showHamburgerMenu }) => {
+const HamburgerMenu = () => {
   // const { setSearchCategory } = useContext(SearchCategoryContext);
 
-  const searchCategoryInput = useRef(null);
+  // const searchCategoryInput = useRef(null);
 
-  const hamburgerMenu = useRef(null);
-
-  const showMenuHandler = () => {
-    if (hamburgerMenu.current) {
-      hamburgerMenu.current.style.display = "block";
-    }
-  };
+  const { setClick } = useContext(HamburgerClickContext);
 
   const hideMenuHandler = () => {
-    hamburgerMenu.current.style.display = "none";
+    setClick(false);
   };
 
   // const categoryKeyHandler = (e) => {
@@ -38,12 +32,7 @@ const HamburgerMenu = ({ showHamburgerMenu }) => {
   //   postsElement.scrollIntoView({ behavior: "smooth" });
   // };
 
-  return (
-    <HamburgerMenuComponent
-      hamburgerMenu={hamburgerMenu}
-      hideMenuHandler={hideMenuHandler}
-    />
-  );
+  return <HamburgerMenuComponent hideMenuHandler={hideMenuHandler} />;
 };
 
 export default HamburgerMenu;

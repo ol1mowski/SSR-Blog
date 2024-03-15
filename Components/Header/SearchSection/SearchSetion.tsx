@@ -1,50 +1,47 @@
 import { useContext, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 
 import SearchComponent from "./SearchComponent/SearchComponent";
 import SearchCategoryContext from "@/store/SearchCategoryContext";
 
 const SearchSetion = () => {
-
-  const navigate = useNavigate();
-
-  const { searchCategory} = useContext(SearchCategoryContext);
+  const { setIsVisible, setSearchCategory } = useContext(SearchCategoryContext);
 
   const searchSection = useRef(null);
 
-  const searchCategoryInput = useRef(null);
+  const searchCategoryInput = useRef<HTMLInputElement>(null);
 
   const showSearchSectionHandler = () => {
-    searchSection.current.style.display = "flex";
+    setIsVisible(true);
   };
 
   const hideSearchSectionHandler = () => {
-    searchSection.current.style.display = "none";
+    setIsVisible(false);
   };
 
-  const unBlurryBackgroundHandler = (e) => {
+  const unBlurryBackgroundHandler = (e: Event) => {
     e.stopPropagation();
   };
 
-  const searchBehavior = (e) => {
+  const searchBehavior = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.target.value = "";
-    searchSection.current.style.display = "none";
-    navigate("#home");
+    setIsVisible(false);  
     const postsElement = document.getElementById("posts")!;
     postsElement.scrollIntoView({ behavior: "smooth" });
   };
 
-  const categoryKeyHandler = (e) => {
+  const categoryKeyHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      setSearchCategory(e.target.value);
-      searchBehavior(e);
+      setSearchCategory(e.currentTarget.value);
+      searchBehavior(e as unknown as React.ChangeEvent<HTMLInputElement>);
     }
   };
 
-  const categoryClickHandler = (e) => {
-    const searchValue = searchCategoryInput.current.value;
-    setSearchCategory(searchValue);
-    searchBehavior(e);
+  const categoryClickHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (searchCategoryInput.current) {
+      const searchValue = searchCategoryInput.current.value;
+      setSearchCategory(searchValue);
+      searchBehavior(e);
+    }
   };
 
   return (

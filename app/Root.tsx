@@ -11,6 +11,8 @@ function Root({
 }>) {
   const [click, setClick] = useState<boolean>(false);
 
+  const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false);
+
   const [category, setCategory] = useState<string | null>(null);
 
   return (
@@ -18,6 +20,8 @@ function Root({
       <body>
         <SearchCategoryContext.Provider
           value={{
+            isVisible: isSearchVisible,
+            setIsVisible: (isVisible: boolean) => setIsSearchVisible(isVisible),
             searchCategory: category,
             setSearchCategory: () => setCategory,
           }}

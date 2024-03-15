@@ -1,4 +1,4 @@
-import img from "@/assets/logo-no-background.svg";
+import img from "@/assets/logo-no-background.png";
 
 import Link from "next/link";
 import s from "./Header.module.scss";
@@ -8,7 +8,6 @@ import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useContext } from "react";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
 
-// import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 // import SearchSetion from "./SearchSection/SearchSetion";
 
 const Header = () => {
@@ -27,8 +26,8 @@ const Header = () => {
               className={s.header__logoSection__img}
               src={img}
               alt="programming-flag"
-              width={190}
-              height={45}
+              width='190'
+              height='45'
               priority
             />
           </Link>

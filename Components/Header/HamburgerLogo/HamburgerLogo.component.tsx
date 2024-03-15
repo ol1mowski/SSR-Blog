@@ -23,7 +23,7 @@ function HamburgerLogo() {
       ref={hamburgerSwitch}
       className={s.hamburgerSection}
     >
-      <Image width={30} height={30} src={hamburger} alt="menu--v6" />
+      <Image width='30' height='30' src={hamburger} alt="menu--v6" />
     </section>
   );
 }

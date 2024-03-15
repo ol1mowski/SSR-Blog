@@ -22,66 +22,6 @@
     padding: 2rem 7rem;
   }
 
-  &__hamburgerMenu {
-    height: 100vh;
-    background-color: $white-background-color;
-    width: 100vw;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    transform: translateX(-100vw);
-    padding: 2rem;
-    overflow-y: scroll;
-    animation: showMenu 1s linear forwards;
-    &__close {
-      @include d-flex;
-      justify-content: flex-end;
-    }
-    &__nav {
-      height: 90vh;
-      @include d-flex-column;
-      justify-content: flex-start;
-      gap: 3rem;
-      &__search {
-        @include d-flex;
-        &__btn {
-          @include btn;
-          border-radius: 0 0.7rem 0.7rem 0;
-          padding: 0.93rem 1rem;
-          cursor: pointer;
-          background-color: $dark-color;
-        }
-        &__inp {
-          @include inp;
-          border-radius: 0.7rem 0 0 0.7rem;
-          background-color: $dark-color;
-          border: none;
-          padding: 1.1rem 1rem;
-          color: $white-color;
-        }
-      }
-      &__items {
-        color: $items-color;
-        @include d-flex-column;
-        list-style-type: none;
-        align-items: flex-start;
-        gap: 0.5rem;
-        &__link_active {
-          font-weight: bold;
-        }
-        &__item {
-          @include items-will-hover;
-          font-size: 2rem;
-          font-weight: 500;
-          margin-bottom: 0.7rem;
-        }
-        &__item:hover {
-          @include items-hover-effect;
-        }
-      }
-    }
-  }
 
   &__navMenu {
     display: none;
@@ -127,9 +67,9 @@
 
   &__logoSection {
     @include d-flex;
-    gap: 1rem;
     &__img {
       padding-top: 0.5rem;
+      padding-right: 1rem;
     }
   }
 
@@ -175,8 +115,3 @@
     transform: translateX(0);
   }
 }
-
-// ::placeholder {
-//   color: #dedede;
-//   font-size: 1rem;
-// }

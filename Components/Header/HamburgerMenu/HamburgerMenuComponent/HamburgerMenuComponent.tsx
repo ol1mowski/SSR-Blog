@@ -1,4 +1,9 @@
-import s from "../../Header.module.scss";
+import s from "./HamburgerMenuComponent.module.scss";
+
+import close from "@/assets/close_icon.png";
+import java from "@/assets/java_icon.png";
+import react from "@/assets/react_icon.png";
+import Image from "next/image";
 
 type HamburgerMenuComponentProps = {
   hideMenuHandler: () => void;
@@ -8,50 +13,49 @@ const HamburgerMenuComponent = ({
   hideMenuHandler,
 }: HamburgerMenuComponentProps) => {
   return (
-    <menu className={s.header__hamburgerMenu}>
-      <section
-        onClick={hideMenuHandler}
-        className={s.header__hamburgerMenu__close}
-      >
-        <img
-          width="30"
-          height="30"
-          src="https://img.icons8.com/ios-glyphs/30/delete-sign.png"
-          alt="delete-sign"
-        />
+    <menu className={s.hamburgerMenu}>
+      <section onClick={hideMenuHandler} className={s.hamburgerMenu__close}>
+        <Image width="30" height="30" src={close} alt="delete-sign" />
       </section>
-      <nav className={s.header__hamburgerMenu__nav}>
-        <img
-          className={s.header__hamburgerMenu__nav__imgJava}
+      <nav className={s.hamburgerMenu__nav}>
+        <Image
+          className={s.hamburgerMenu__nav__imgJava}
           width="100"
           height="100"
-          src="https://img.icons8.com/dusk/100/java-coffee-cup-logo.png"
+          src={java}
           alt="java-coffee-cup-logo"
         />
-        <ul className={s.header__hamburgerMenu__nav__items}>
-          <li className={s.header__hamburgerMenu__nav__items__item}>Home</li>
-        </ul>
-        {/* <div className={s.header__hamburgerMenu__nav__search}>
-          <input
-            ref={searchCategoryInput}
-            onKeyDown={categoryKeyHandler}
-            placeholder="Enter category"
-            type="text"
-            name="search"
-            className={s.header__hamburgerMenu__nav__search__inp}
-          />
-          <button
-            onClick={categoryClickHandler}
-            className={s.header__hamburgerMenu__nav__search__btn}
+        <ul className={s.hamburgerMenu__nav__items}>
+          <li
+            onClick={hideMenuHandler}
+            className={s.hamburgerMenu__nav__items__item}
           >
-            <img width="20" height="20" src={search} alt="search--v1" />
-          </button>
-        </div> */}
-        <img
-          className={s.header__hamburgerMenu__nav__imgReact}
+            Home
+          </li>{" "}
+          <li
+            onClick={hideMenuHandler}
+            className={s.hamburgerMenu__nav__items__item}
+          >
+            About Author
+          </li>{" "}
+          <li
+            onClick={hideMenuHandler}
+            className={s.hamburgerMenu__nav__items__item}
+          >
+            Books for programmers
+          </li>{" "}
+          <li
+            onClick={hideMenuHandler}
+            className={s.hamburgerMenu__nav__items__item}
+          >
+            Recomended courses
+          </li>
+        </ul>
+        <Image
+          className={s.hamburgerMenu__nav__imgReact}
           width="200"
           height="200"
-          src="https://img.icons8.com/clouds/300/react.png"
+          src={react}
           alt="react"
         />
       </nav>

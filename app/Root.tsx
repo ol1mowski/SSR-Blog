@@ -23,7 +23,8 @@ function Root({
             isVisible: isSearchVisible,
             setIsVisible: (isVisible: boolean) => setIsSearchVisible(isVisible),
             searchCategory: category,
-            setSearchCategory: () => setCategory,
+            setSearchCategory: (searchCategory: string) =>
+              setCategory(searchCategory),
           }}
         >
           <HamburgerClickContext.Provider

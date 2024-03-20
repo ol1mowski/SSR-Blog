@@ -1,0 +1,31 @@
+@import "@/sass/settings.scss";
+
+
+.searchSection {
+  position: fixed;
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  @include d-flex;
+  &__searchPlace {
+    border-radius: 0.5rem;
+    @include d-flex;
+    &__btn {
+      @include btn;
+      border-radius: 0 0.7rem 0.7rem 0;
+      padding: 0.93rem 1rem;
+      cursor: pointer;
+      background-color: $dark-color;
+    }
+    &__inp {
+      @include inp;
+      border-radius: 0.7rem 0 0 0.7rem;
+      background-color: $dark-color;
+      border: none;
+      padding: 1.1rem 7rem;
+      color: $white-color;
+    }
+  }
+}

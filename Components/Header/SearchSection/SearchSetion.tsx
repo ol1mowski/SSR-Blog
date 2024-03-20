@@ -1,12 +1,13 @@
 import { useContext, useRef } from "react";
 
-import SearchComponent from "./SearchComponent/SearchComponent";
 import SearchCategoryContext from "@/store/SearchCategoryContext";
+import SearchIcon from "./SearchComponents/Search-Icon-Component/SearchIcon.components";
+import SearchField from "./SearchComponents/Search-Field-Component/SearchField.component";
 
 const SearchSetion = () => {
-  const { setIsVisible, setSearchCategory } = useContext(SearchCategoryContext);
-
-  const searchSection = useRef(null);
+  const { setIsVisible, setSearchCategory, isVisible } = useContext(
+    SearchCategoryContext
+  );
 
   const searchCategoryInput = useRef<HTMLInputElement>(null);
 
@@ -18,13 +19,13 @@ const SearchSetion = () => {
     setIsVisible(false);
   };
 
-  const unBlurryBackgroundHandler = (e: Event) => {
+  const unBlurryBackgroundHandler = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
   };
 
   const searchBehavior = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.target.value = "";
-    setIsVisible(false);  
+    setIsVisible(false);
     const postsElement = document.getElementById("posts")!;
     postsElement.scrollIntoView({ behavior: "smooth" });
   };
@@ -45,15 +46,24 @@ const SearchSetion = () => {
   };
 
   return (
-    <SearchComponent
-    // showSearchSectionHandler={showSearchSectionHandler}
-    // hideSearchSectionHandler={hideSearchSectionHandler}
-    // unBlurryBackgroundHandler={unBlurryBackgroundHandler}
-    // categoryClickHandler={categoryClickHandler}
-    // categoryKeyHandler={categoryKeyHandler}
-    // searchSection={searchSection}
-    // searchCategoryInput={searchCategoryInput}
-    />
+    // <SearchComponent
+    //   showSearchSectionHandler={showSearchSectionHandler}
+    //   // unBlurryBackgroundHandler={unBlurryBackgroundHandler}
+    //   // categoryClickHandler={categoryClickHandler}
+    //   // categoryKeyHandler={categoryKeyHandler}
+    //   // searchSection={searchSection}
+    //   // searchCategoryInput={searchCategoryInput}
+    // />
+    <>
+      <SearchIcon showSearchSectionHandler={showSearchSectionHandler} />
+
+      {isVisible ? (
+        <SearchField
+          unBlurryBackgroundHandler={unBlurryBackgroundHandler}
+          hideSearchSectionHandler={hideSearchSectionHandler}
+        />
+      ) : null}
+    </>
   );
 };
 

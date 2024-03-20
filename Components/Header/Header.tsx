@@ -27,8 +27,8 @@ const Header = () => {
               className={s.header__logoSection__img}
               src={img}
               alt="programming-flag"
-              width='190'
-              height='45'
+              width='250'
+              height='50'
               priority
             />
           </Link>

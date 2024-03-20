@@ -38,6 +38,9 @@
       list-style-type: none;
       @include header;
       font-size: 1rem;
+      @media screen and (min-width: $desktop) {
+        margin-left: 10rem;
+      }
       &__link_active {
         font-weight: bold;
       }

@@ -22,7 +22,6 @@
   left: 0;
   top: 0;
   @include d-flex;
-  display: none;
   &__searchPlace {
     border-radius: 0.5rem;
     @include d-flex;

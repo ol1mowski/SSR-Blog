@@ -1,8 +1,9 @@
+import SliderComponent from "@/Components/Slider/Slider";
 
 function page() {
   return (
     <>
-      <h1>Main</h1>
+      <SliderComponent />
     </>
   );
 }

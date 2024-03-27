@@ -1,0 +1,136 @@
+@import "@/sass/settings.scss";
+
+.sliderContainer {
+  scroll-margin: 20rem;
+  width: 90vw;
+  margin: 2rem auto;
+  @include d-flex-column;
+  justify-content: flex-start;
+  margin-top: 5rem;
+  gap: 2rem;
+  animation: slideAnimation 1s linear forwards;
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: $big-tablets) {
+    width: 50rem;
+    gap: 7vw;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 60rem;
+    gap: 5vw;
+    margin-top: 7rem;
+  }
+
+  &__image {
+    width: 80vw;
+
+    @media screen and (min-width: $mobile) {
+      width: 65vw;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 150rem;
+    }
+
+    &__img {
+      animation: slideAnimation 1s linear forwards;
+      width: 100%;
+      border-radius: 0.7rem;
+    }
+  }
+
+  &__content {
+    @include d-flex-column;
+    align-items: flex-start;
+    padding: 0 7vw;
+    gap: 0.5rem;
+
+    @media screen and (min-width: $tablet) {
+      padding-left: 2rem;
+      padding-right: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0;
+      gap: 0.7rem;
+    }
+
+    &__category {
+      color: $blue-color;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    &__title {
+      color: $dark-color;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &__text {
+      @include p;
+    }
+
+    &__read {
+      color: $blue-color;
+      font-size: 1rem;
+      font-weight: bold;
+      will-change: scale;
+      transition: scale 0.7s;
+      cursor: pointer;
+
+      @media screen and (min-width: $desktop) {
+        margin-top: 1rem;
+      }
+    }
+    &__read:hover {
+      scale: 1.1;
+    }
+  }
+
+  &__sliderDots {
+    @include d-flex;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    @media screen and (min-width: $desktop) {
+      margin: 4rem 0;
+    }
+
+
+    &__dot {
+      cursor: pointer;
+      border-radius: 100%;
+      width: 0.5rem;
+      height: 0.5rem;
+      border: 1px solid $blue-color;
+      transition: all 1s;
+      will-change: backgroundColor;
+    }
+
+    &__dot__active {
+      border-radius: 100%;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: $blue-color;
+    }
+  }
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(-3vh);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

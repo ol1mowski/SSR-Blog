@@ -6,11 +6,15 @@
   margin: 2rem auto;
   @include d-flex-column;
   margin-top: 5rem;
-  gap: 3rem;
+  gap: 1rem;
+  @media screen and (min-width: $desktop) {
+    width: 85rem;
+  }
   &__header {
     width: 100%;
     @include d-flex-column;
     gap: 0.5rem;
+    padding: 0 1rem;
     align-items: flex-start;
     @media screen and (min-width: $mobile) {
       padding-left: 5rem;
@@ -20,10 +24,6 @@
     }
     &__content {
       @include p;
-      width: 20rem;
-      @media screen and (min-width: $desktop) {
-        width: 25rem;
-      }
     }
   }
   &__content {
@@ -36,10 +36,13 @@
       @include d-flex-column;
       gap: 1rem;
       align-items: flex-start;
-      padding: 2rem;
+      padding: 1rem;
       border-radius: 0.5rem;
       transition: scale 0.7s;
       will-change: scale;
+      @media screen and (min-width: $large-desktop) {
+        padding: 2rem;
+      }
       &__img {
         border-radius: 0.5rem;
         @media screen and (min-width: $mobile) {
@@ -53,10 +56,6 @@
         @media screen and (min-width: $desktop) {
           width: 15rem;
           height: 10rem;
-        }
-        @media screen and (min-width: $large-desktop) {
-          width: 21rem;
-          height: 12.5rem;
         }
       }
       &__text {

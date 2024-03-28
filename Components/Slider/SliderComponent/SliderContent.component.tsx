@@ -21,7 +21,6 @@ const SliderComponent = () => {
           />
         </div>
         <div className={s.sliderContainer__content}>
-          <p className={s.sliderContainer__content__category}>React</p>
           <h2 className={s.sliderContainer__content__title}>
             How to start learn react in 2024 ?
           </h2>
@@ -31,9 +30,6 @@ const SliderComponent = () => {
             mastering JSX to building dynamic UIs, embark on your React journey
             today! 💡💻 #LearnReact #WebDevelopment #CodingGuide
           </h3>
-          <Link href={`/`}>
-            <p className={s.sliderContainer__content__read}>Read more</p>
-          </Link>
         </div>
       </main>
       <section className={s.sliderContainer__sliderDots}>

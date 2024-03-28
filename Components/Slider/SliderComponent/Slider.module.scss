@@ -60,35 +60,12 @@
       gap: 0.7rem;
     }
 
-    &__category {
-      color: $blue-color;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
     &__title {
       @include header;
     }
 
     &__text {
       @include p;
-    }
-
-    &__read {
-      color: $blue-color;
-      font-size: 1rem;
-      font-weight: bold;
-      will-change: scale;
-      transition: scale 0.7s;
-      cursor: pointer;
-
-      @media screen and (min-width: $desktop) {
-        margin-top: 1rem;
-      }
-    }
-    &__read:hover {
-      scale: 1.1;
     }
   }
 

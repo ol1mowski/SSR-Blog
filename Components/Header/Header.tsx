@@ -22,7 +22,7 @@ const Header = () => {
     <>
       <header className={s.header}>
         <section className={s.header__logoSection}>
-          <Link href={"/"}>
+          {/* <Link href={"/"}>
             <Image
               className={s.header__logoSection__img}
               src={img}
@@ -31,7 +31,7 @@ const Header = () => {
               height='50'
               priority
             />
-          </Link>
+          </Link> */}
         </section>
         <section className={s.header__navMenu}>
           <div className={s.header__navMenu__nav}>

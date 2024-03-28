@@ -9,8 +9,7 @@ function Category() {
       <section className={s.categoryContainer__header}>
         <h2 className={s.categoryContainer__header__title}>Categories</h2>
         <p className={s.categoryContainer__header__content}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum
-          molestiae eveniet, impedit ratione
+          Discover the latest articles from the categories that interest you 🚀
         </p>
       </section>
       <section className={s.categoryContainer__content}>

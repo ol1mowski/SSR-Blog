@@ -1,9 +1,7 @@
-// import { memo, useEffect, useRef, useState } from "react";
 import s from "./Slider.module.scss";
 
 import img from "@/assets/react.webp";
 import Image from "next/image";
-import Link from "next/link";
 
 const SliderComponent = () => {
 

@@ -21,6 +21,7 @@ const SliderComponent = () => {
           />
         </div>
         <div className={s.sliderContainer__content}>
+          <span className={s.sliderContainer__content__latest}>Latest</span>
           <h2 className={s.sliderContainer__content__title}>
             How to start learn react in 2024 ?
           </h2>
@@ -32,11 +33,6 @@ const SliderComponent = () => {
           </h3>
         </div>
       </main>
-      <section className={s.sliderContainer__sliderDots}>
-        <div className={s.sliderContainer__sliderDots__dot__active}></div>
-        <div className={s.sliderContainer__sliderDots__dot}></div>
-        <div className={s.sliderContainer__sliderDots__dot}></div>
-      </section>
     </>
   );
 };

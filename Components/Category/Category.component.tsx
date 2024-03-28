@@ -30,9 +30,15 @@ function Category() {
             >
               React Tutorial
             </p>
-            <p>10 articles</p>
+            <p
+              className={
+                s.categoryContainer__content__imageWrapper__text__subtitle
+              }
+            >
+              10 articles
+            </p>
           </div>
-        </div>
+        </div>{" "}
         <div className={s.categoryContainer__content__imageWrapper}>
           <Image
             className={s.categoryContainer__content__imageWrapper__img}
@@ -49,9 +55,15 @@ function Category() {
             >
               React Tutorial
             </p>
-            <p>10 articles</p>
+            <p
+              className={
+                s.categoryContainer__content__imageWrapper__text__subtitle
+              }
+            >
+              10 articles
+            </p>
           </div>
-        </div>
+        </div>{" "}
         <div className={s.categoryContainer__content__imageWrapper}>
           <Image
             className={s.categoryContainer__content__imageWrapper__img}
@@ -68,9 +80,15 @@ function Category() {
             >
               React Tutorial
             </p>
-            <p>10 articles</p>
+            <p
+              className={
+                s.categoryContainer__content__imageWrapper__text__subtitle
+              }
+            >
+              10 articles
+            </p>
           </div>
-        </div>
+        </div>{" "}
         <div className={s.categoryContainer__content__imageWrapper}>
           <Image
             className={s.categoryContainer__content__imageWrapper__img}
@@ -87,7 +105,13 @@ function Category() {
             >
               React Tutorial
             </p>
-            <p>10 articles</p>
+            <p
+              className={
+                s.categoryContainer__content__imageWrapper__text__subtitle
+              }
+            >
+              10 articles
+            </p>
           </div>
         </div>
       </section>

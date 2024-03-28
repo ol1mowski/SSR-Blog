@@ -1,0 +1,67 @@
+@import "@/sass/settings.scss";
+
+.latestVideoContainer {
+  scroll-margin: 20rem;
+  width: 90vw;
+  margin: 2rem auto;
+  @include d-flex-column;
+  margin-top: 5rem;
+  gap: 1rem;
+  @media screen and (min-width: $desktop) {
+    width: 85rem;
+  }
+  &__header {
+    width: 100%;
+    @include d-flex-column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    align-items: flex-start;
+    @media screen and (min-width: $mobile) {
+      padding-left: 5rem;
+    }
+    &__title {
+      @include header;
+    }
+    &__content {
+      @include p;
+    }
+  }
+  &__content {
+    @include d-flex-column;
+    cursor: pointer;
+    @media screen and (min-width: $small-desktop) {
+      flex-direction: row;
+    }
+    &__imageWrapper {
+      @include d-flex-column;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      transition: scale 0.7s;
+      will-change: scale;
+      @media screen and (min-width: $large-desktop) {
+        padding: 2rem;
+      }
+      &__img {
+        border-radius: 0.5rem;
+        @media screen and (min-width: $mobile) {
+          width: 20rem;
+          height: 15rem;
+        }
+        @media screen and (min-width: $small-desktop) {
+          width: 15rem;
+          height: 10rem;
+        }
+        @media screen and (min-width: $desktop) {
+          width: 20rem;
+          height: 15rem;
+        }
+      }
+    }
+    &__imageWrapper:hover {
+      scale: 1.1;
+      box-shadow: $box-shadow;
+    }
+  }
+}

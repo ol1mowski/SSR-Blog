@@ -72,6 +72,12 @@ $box-shadow-category: 1px 1px 1px 1px $blue-color;
   flex-direction: column;
 }
 
+@mixin header() {
+  color: $dark-color;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 @mixin p() {
   font-family: Mulish, sans-serif;
   color: #555;

@@ -68,9 +68,7 @@
     }
 
     &__title {
-      color: $dark-color;
-      font-size: 2rem;
-      font-weight: bold;
+      @include header;
     }
 
     &__text {
@@ -102,7 +100,6 @@
     @media screen and (min-width: $desktop) {
       margin: 4rem 0;
     }
-
 
     &__dot {
       cursor: pointer;

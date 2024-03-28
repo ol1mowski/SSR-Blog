@@ -39,9 +39,9 @@ const Header = () => {
               <Link href={"/"}>
                 <li className={s.header__navMenu__items__item}>Home</li>
               </Link>{" "}
-              <Link href={"/"}>
+              <a href='https://oliwiermarkiewicz.netlify.app/' target="_blank">
                 <li className={s.header__navMenu__items__item}>About Author</li>
-              </Link>{" "}
+              </a>{" "}
               <Link href={"/"}>
                 <li className={s.header__navMenu__items__item}>
                   Books for programmer

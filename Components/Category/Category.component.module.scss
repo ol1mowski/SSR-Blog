@@ -21,6 +21,9 @@
     &__content {
       @include p;
       width: 20rem;
+      @media screen and (min-width: $desktop) {
+        width: 25rem;
+      }
     }
   }
   &__content {
@@ -50,6 +53,10 @@
         @media screen and (min-width: $desktop) {
           width: 15rem;
           height: 10rem;
+        }
+        @media screen and (min-width: $large-desktop) {
+          width: 21rem;
+          height: 12.5rem;
         }
       }
       &__text {

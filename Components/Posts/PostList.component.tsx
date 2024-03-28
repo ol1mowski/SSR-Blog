@@ -3,6 +3,8 @@ import s from "./PostList.component.module.scss";
 
 import img from "@/assets/react.webp";
 
+import clock from "@/assets/clock.png";
+
 function PostsList() {
   return (
     <section className={s.PostListContainer}>
@@ -69,7 +71,7 @@ function PostsList() {
                     s.PostListContainer__content__postWrapper__post__subContent__authorWrapper
                   }
                 >
-                  <Image
+                  {/* <Image
                     className={
                       s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__img
                     }
@@ -82,7 +84,7 @@ function PostsList() {
                     }
                   >
                     Oliwier Markiewicz
-                  </span>
+                  </span> */}
                   <span
                     className={
                       s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__data
@@ -100,7 +102,9 @@ function PostsList() {
                     className={
                       s.PostListContainer__content__postWrapper__post__subContent__readContainer__img
                     }
-                    src={""}
+                    src={clock}
+                    width={20}
+                    height={20}
                     alt=""
                   />
                   <span

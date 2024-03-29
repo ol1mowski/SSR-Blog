@@ -28,19 +28,16 @@
 
   &__image {
     width: 80vw;
-
-    @media screen and (min-width: $mobile) {
-      width: 65vw;
-    }
-
     @media screen and (min-width: $tablet) {
       width: 150rem;
+      height: 20rem;
     }
 
     &__img {
       animation: slideAnimation 1s linear forwards;
-      width: 100%;
       border-radius: 0.7rem;
+      width: 100%;
+      height: 100%;
     }
   }
 

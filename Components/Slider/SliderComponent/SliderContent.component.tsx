@@ -11,8 +11,6 @@ const SliderComponent = () => {
         <div className={s.sliderContainer__image}>
           <Image
             src={img}
-            width={250}
-            height={350}
             draggable="false"
             alt="post image"
             className={s.sliderContainer__image__img}

@@ -40,6 +40,7 @@
       font-size: 1rem;
       @media screen and (min-width: $desktop) {
         margin-left: 10rem;
+        font-size: 1.3rem;
       }
       &__link_active {
         font-weight: bold;

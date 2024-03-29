@@ -1,4 +1,3 @@
-import Header from "@/Components/Header/Header";
 import type { Metadata } from "next";
 import "@/app/global.scss";
 import Root from "./Root";

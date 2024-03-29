@@ -42,14 +42,8 @@ const HamburgerMenuComponent = ({
             onClick={hideMenuHandler}
             className={s.hamburgerMenu__nav__items__item}
           >
-            Books for programmers
+            Posts
           </li>{" "}
-          <li
-            onClick={hideMenuHandler}
-            className={s.hamburgerMenu__nav__items__item}
-          >
-            Recomended courses
-          </li>
         </ul>
         <Image
           className={s.hamburgerMenu__nav__imgReact}

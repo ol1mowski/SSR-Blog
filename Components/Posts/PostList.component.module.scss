@@ -146,4 +146,22 @@
       scale: 1.01;
     }
   }
+  &__button {
+    @include d-flex;
+    width: 100%;
+    margin-top: 2rem;
+    &__btn {
+      background-color: #0c6cfdcd;
+      border-radius: .3rem;
+      border: none;
+      padding: .7rem 2rem;
+      cursor: pointer;
+      color: $white-color;
+      transition: scale .7s;
+      will-change: scale;
+    }
+    &__btn:hover {
+      scale: 1.1;
+    }
+  }
 }

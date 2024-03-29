@@ -188,6 +188,9 @@ function PostsList() {
           </div>
         </div>
       </section>
+      <section className={s.PostListContainer__button}>
+        <button className={s.PostListContainer__button__btn}>More</button>
+      </section>
     </section>
   );
 }

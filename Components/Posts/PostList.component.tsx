@@ -15,110 +15,178 @@ function PostsList() {
         </p>
       </section>
       <section className={s.PostListContainer__content}>
-        <a href="">
-          <div className={s.PostListContainer__content__postWrapper}>
+        <div className={s.PostListContainer__content__postWrapper}>
+          <div
+            className={s.PostListContainer__content__postWrapper__imageWrapper}
+          >
+            <Image
+              className={
+                s.PostListContainer__content__postWrapper__imageWrapper__img
+              }
+              src={img}
+              alt=""
+              width={200}
+              height={150}
+            />
+          </div>
+          <div className={s.PostListContainer__content__postWrapper__post}>
             <div
               className={
-                s.PostListContainer__content__postWrapper__imageWrapper
+                s.PostListContainer__content__postWrapper__post__content
               }
             >
-              <Image
+              <span
                 className={
-                  s.PostListContainer__content__postWrapper__imageWrapper__img
+                  s.PostListContainer__content__postWrapper__post__content__category
                 }
-                src={img}
-                alt=""
-                width={200}
-                height={150}
-              />
+              >
+                React
+              </span>
+              <h3
+                className={
+                  s.PostListContainer__content__postWrapper__post__content__title
+                }
+              >
+                How to start learn react in 2024 ?
+              </h3>
+              <p
+                className={
+                  s.PostListContainer__content__postWrapper__post__content__description
+                }
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                consequatur eligendi maiores eum, dolore harum{" "}
+              </p>
             </div>
-            <div className={s.PostListContainer__content__postWrapper__post}>
+            <section
+              className={
+                s.PostListContainer__content__postWrapper__post__subContent
+              }
+            >
               <div
                 className={
-                  s.PostListContainer__content__postWrapper__post__content
+                  s.PostListContainer__content__postWrapper__post__subContent__authorWrapper
                 }
               >
                 <span
                   className={
-                    s.PostListContainer__content__postWrapper__post__content__category
+                    s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__data
                   }
                 >
-                  React
+                  28-03-2024
                 </span>
-                <h3
-                  className={
-                    s.PostListContainer__content__postWrapper__post__content__title
-                  }
-                >
-                  How to start learn react in 2024 ?
-                </h3>
-                <p
-                  className={
-                    s.PostListContainer__content__postWrapper__post__content__description
-                  }
-                >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                  consequatur eligendi maiores eum, dolore harum{" "}
-                </p>
               </div>
-              <section
+              <div
                 className={
-                  s.PostListContainer__content__postWrapper__post__subContent
+                  s.PostListContainer__content__postWrapper__post__subContent__readContainer
                 }
               >
-                <div
+                <Image
                   className={
-                    s.PostListContainer__content__postWrapper__post__subContent__authorWrapper
+                    s.PostListContainer__content__postWrapper__post__subContent__readContainer__img
+                  }
+                  src={clock}
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+                <span
+                  className={
+                    s.PostListContainer__content__postWrapper__post__subContent__readContainer__readTime
                   }
                 >
-                  {/* <Image
-                    className={
-                      s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__img
-                    }
-                    src={""}
-                    alt=""
-                  />
-                  <span
-                    className={
-                      s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__author
-                    }
-                  >
-                    Oliwier Markiewicz
-                  </span> */}
-                  <span
-                    className={
-                      s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__data
-                    }
-                  >
-                    28-03-2024
-                  </span>
-                </div>
-                <div
-                  className={
-                    s.PostListContainer__content__postWrapper__post__subContent__readContainer
-                  }
-                >
-                  <Image
-                    className={
-                      s.PostListContainer__content__postWrapper__post__subContent__readContainer__img
-                    }
-                    src={clock}
-                    width={20}
-                    height={20}
-                    alt=""
-                  />
-                  <span
-                    className={
-                      s.PostListContainer__content__postWrapper__post__subContent__readContainer__readTime
-                    }
-                  >
-                    5 min
-                  </span>
-                </div>
-              </section>
-            </div>
+                  5 min
+                </span>
+              </div>
+            </section>
           </div>
-        </a>
+        </div>{" "}
+        <div className={s.PostListContainer__content__postWrapper}>
+          <div
+            className={s.PostListContainer__content__postWrapper__imageWrapper}
+          >
+            <Image
+              className={
+                s.PostListContainer__content__postWrapper__imageWrapper__img
+              }
+              src={img}
+              alt=""
+              width={200}
+              height={150}
+            />
+          </div>
+          <div className={s.PostListContainer__content__postWrapper__post}>
+            <div
+              className={
+                s.PostListContainer__content__postWrapper__post__content
+              }
+            >
+              <span
+                className={
+                  s.PostListContainer__content__postWrapper__post__content__category
+                }
+              >
+                React
+              </span>
+              <h3
+                className={
+                  s.PostListContainer__content__postWrapper__post__content__title
+                }
+              >
+                How to start learn react in 2024 ?
+              </h3>
+              <p
+                className={
+                  s.PostListContainer__content__postWrapper__post__content__description
+                }
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                consequatur eligendi maiores eum, dolore harum{" "}
+              </p>
+            </div>
+            <section
+              className={
+                s.PostListContainer__content__postWrapper__post__subContent
+              }
+            >
+              <div
+                className={
+                  s.PostListContainer__content__postWrapper__post__subContent__authorWrapper
+                }
+              >
+                <span
+                  className={
+                    s.PostListContainer__content__postWrapper__post__subContent__authorWrapper__data
+                  }
+                >
+                  28-03-2024
+                </span>
+              </div>
+              <div
+                className={
+                  s.PostListContainer__content__postWrapper__post__subContent__readContainer
+                }
+              >
+                <Image
+                  className={
+                    s.PostListContainer__content__postWrapper__post__subContent__readContainer__img
+                  }
+                  src={clock}
+                  width={20}
+                  height={20}
+                  alt=""
+                />
+                <span
+                  className={
+                    s.PostListContainer__content__postWrapper__post__subContent__readContainer__readTime
+                  }
+                >
+                  5 min
+                </span>
+              </div>
+            </section>
+          </div>
+        </div>
       </section>
     </section>
   );

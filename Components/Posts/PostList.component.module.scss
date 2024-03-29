@@ -27,10 +27,27 @@
     }
   }
   &__content {
-    @include d-flex-column;
+    transition: scale 0.7s;
+    will-change: scale;
+    width: 18rem;
+    display: grid;
+    gap: 3rem;
     cursor: pointer;
+    @media screen and (min-width: $mobile) {
+      width: 22rem;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 35rem;
+    }
     @media screen and (min-width: $small-desktop) {
-      flex-direction: row;
+      grid-template-columns: repeat(2, 1fr);
+      width: 60rem;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 80rem;
+    }
+    @media screen and (min-width: $large-desktop) {
+      width: 90rem;
     }
     &__postWrapper {
       @include d-flex-column;
@@ -40,8 +57,14 @@
       border-radius: 0.5rem;
       transition: scale 0.7s;
       will-change: scale;
-      @media screen and (min-width: $large-desktop) {
-        padding: 2rem;
+      @media screen and (min-width: $tablet) {
+        flex-direction: row;
+      }
+      @media screen and (min-width: $small-desktop) {
+        gap: 0;
+      }
+      @media screen and (min-width: $desktop) {
+        gap: 1rem;
       }
       &__imageWrapper {
         @include d-flex-column;
@@ -50,22 +73,22 @@
           width: 15rem;
           border-radius: 0.5rem;
           @media screen and (min-width: $mobile) {
-            width: 20rem;
-            height: 15rem;
+            width: 18rem;
+            height: 13rem;
           }
           @media screen and (min-width: $small-desktop) {
-            width: 15rem;
-            height: 10rem;
+            width: 10rem;
+            height: 7rem;
           }
           @media screen and (min-width: $desktop) {
-            width: 20rem;
+            width: 18rem;
+            height: 13rem;
+          }
+          @media screen and (min-width: $large-desktop) {
+            width: 25rem;
             height: 15rem;
           }
         }
-      }
-      &__imageWrapper:hover {
-        scale: 1.1;
-        box-shadow: $box-shadow;
       }
       &__post {
         @include d-flex-column;
@@ -76,11 +99,34 @@
           @include d-flex-column;
           gap: 0.5rem;
           align-items: flex-start;
+          &__title {
+            font-size: 1.3rem;
+            @media screen and (min-width: $large-desktop) {
+              font-size: 1.6rem;
+            }
+          }
+          &__description {
+            @include p;
+            line-height: 1.3rem;
+            @media screen and (min-width: $big-tablets) {
+              font-size: 1.1rem;
+            }
+            @media screen and (min-width: $small-desktop) {
+              display: none;
+            }
+            @media screen and (min-width: $desktop) {
+              display: block;
+            }
+            @media screen and (min-width: $large-desktop) {
+              font-size: 1.3rem;
+              line-height: 1.5rem;
+            }
+          }
           &__category {
             padding: 0.1rem 1rem;
             border-radius: 0.3rem;
             background-color: #0c6cfdcd;
-            color: #fff;
+            color: $white-color;
           }
         }
         &__subContent {
@@ -89,10 +135,15 @@
           width: 100%;
           &__readContainer {
             @include d-flex;
-            gap: .5rem;
+            gap: 0.5rem;
+            
           }
         }
       }
+    }
+    &__postWrapper:hover {
+      box-shadow: $box-shadow;
+      scale: 1.01;
     }
   }
 }

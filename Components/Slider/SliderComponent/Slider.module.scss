@@ -8,16 +8,25 @@
   justify-content: flex-start;
   margin-top: 5rem;
   gap: 2rem;
+  padding: 4rem 0;
+  box-shadow: $box-shadow;
+  border-radius: 0.5rem;
+  cursor: pointer;
   animation: slideAnimation 1s linear forwards;
 
   @media screen and (min-width: $tablet) {
     flex-direction: row;
     justify-content: flex-start;
+    padding: 4rem;
   }
 
   @media screen and (min-width: $big-tablets) {
     width: 50rem;
     gap: 7vw;
+  }
+
+  @media screen and (min-width: $small-desktop) {
+    width: 55rem;
   }
 
   @media screen and (min-width: $desktop) {
@@ -29,10 +38,12 @@
   &__image {
     width: 80vw;
     @media screen and (min-width: $tablet) {
-      width: 150rem;
+      width: 140rem;
       height: 20rem;
     }
-
+    @media screen and (min-width: $small-desktop) {
+      width: 170rem;
+    }
     &__img {
       animation: slideAnimation 1s linear forwards;
       border-radius: 0.7rem;

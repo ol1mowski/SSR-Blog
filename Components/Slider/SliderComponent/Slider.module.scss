@@ -12,7 +12,8 @@
   box-shadow: $box-shadow;
   border-radius: 0.5rem;
   cursor: pointer;
-  animation: slideAnimation 1s linear forwards;
+  animation: sliderStartAnimate linear 1s;
+  // animation: slideAnimation 1s linear forwards;
 
   @media screen and (min-width: $tablet) {
     flex-direction: row;
@@ -36,9 +37,10 @@
   }
   &__image {
     width: 80vw;
+    height: 20%;
     @media screen and (min-width: $tablet) {
-      width: 140rem;
-      height: 20rem;
+      width: 150rem;
+      height: 40vh;
     }
     @media screen and (min-width: $small-desktop) {
       width: 170rem;
@@ -57,6 +59,7 @@
     align-items: flex-start;
     padding: 0 7vw;
     gap: 0.5rem;
+    height: 80%;
 
     @media screen and (min-width: $tablet) {
       padding-left: 2rem;
@@ -85,6 +88,17 @@
     &__text {
       @include p;
     }
+  }
+}
+
+@keyframes sliderStartAnimate {
+  0% {
+    scale: 0.7;
+    transform: translateX(-10vw);
+  }
+  100% {
+    scale: 1;
+    transform: translateX(0);
   }
 }
 

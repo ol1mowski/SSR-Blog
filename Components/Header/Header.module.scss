@@ -48,7 +48,7 @@
         letter-spacing: 2px;
         padding: 0.5rem 1rem;
         color: $white-color;
-        transition: color, scale, box-shadow 0.7s;
+        transition: background, scale 0.7s;
         border-radius: 0.3rem;
       }
       &__item:hover {

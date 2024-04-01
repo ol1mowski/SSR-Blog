@@ -2,27 +2,75 @@
 
 .homepageContainer {
   height: 100vh;
+  @media screen and (min-width: $big-tablets) {
+    @include d-flex;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 4rem;
+  }
+
   &__image {
     display: none;
+    @media screen and (min-width: $big-tablets) {
+      @include d-flex;
+    }
+    &__imageWrapper {
+      @include d-flex;
+      padding-top: 3rem;
+      &__img {
+        border-radius: 0.5rem;
+        @media screen and (min-width: $desktop) {
+          width: 40rem;
+          height: 25rem;
+        }
+      }
+    }
+    &__img {
+      border-radius: 0.5rem;
+    }
   }
   &__content {
     @include d-flex-column;
     height: 100%;
     gap: 1rem;
     padding-left: 1rem;
+    @media screen and (min-width: $mobile) {
+      padding-left: 3rem;
+    }
 
     &__title {
       width: 100%;
+      padding-top: 5rem;
       &__h1 {
         font-weight: 900;
         font-size: 4.5rem;
         color: $white-color;
+        @media screen and (min-width: $mobile) {
+          font-size: 6rem;
+          width: 30rem;
+        }
+        @media screen and (min-width: $big-tablets) {
+          font-size: 5rem;
+          width: 20rem;
+        }
+        @media screen and (min-width: $desktop) {
+          font-size: 6rem;
+          width: 30rem;
+        }
       }
     }
     &__description {
       width: 100%;
       &__p {
         color: #808080;
+        @media screen and (min-width: $mobile) {
+          width: 30rem;
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+        }
+        @media screen and (min-width: $big-tablets) {
+          width: 20rem;
+        }
       }
     }
     &__buttonWrapper {

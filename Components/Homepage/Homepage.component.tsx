@@ -1,6 +1,8 @@
 import Image from "next/image";
 import s from "./Homepage.component.module.scss";
 
+import img from "@/assets/gif.gif";
+
 const HomepageComponent = () => {
   return (
     <section className={s.homepageContainer}>
@@ -8,14 +10,16 @@ const HomepageComponent = () => {
         <div className={s.homepageContainer__image__imageWrapper}>
           <Image
             className={s.homepageContainer__image__imageWrapper__img}
-            src={""}
+            src={img}
             alt=""
           />
         </div>
       </section>
       <section className={s.homepageContainer__content}>
         <div className={s.homepageContainer__content__title}>
-          <h1 className={s.homepageContainer__content__title__h1}>Blog dla Twórców Stron</h1>
+          <h1 className={s.homepageContainer__content__title__h1}>
+            Blog dla Twórców Stron
+          </h1>
         </div>
         <div className={s.homepageContainer__content__description}>
           <p className={s.homepageContainer__content__description__p}>

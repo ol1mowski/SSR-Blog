@@ -15,10 +15,10 @@ const HomepageComponent = () => {
       </section>
       <section className={s.homepageContainer__content}>
         <div className={s.homepageContainer__content__title}>
-          <h1>Blog dla Twórców Stron</h1>
+          <h1 className={s.homepageContainer__content__title__h1}>Blog dla Twórców Stron</h1>
         </div>
         <div className={s.homepageContainer__content__description}>
-          <p>
+          <p className={s.homepageContainer__content__description__p}>
             Znajdziesz tu konkrety o pracy w branży it, Najnowocześniejsze
             rozwiązania w branży, oraz praktyczne porady i wiele więcej
           </p>

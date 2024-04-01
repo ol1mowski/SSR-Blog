@@ -83,15 +83,34 @@
         width: 7rem;
         height: 2.5rem;
         border-radius: 0.5rem;
+        cursor: pointer;
+        transition: scale 0.7s;
+      }
+      &__button:hover {
+        scale: 1.05;
       }
       &__button_read {
         border: none;
         background-color: #85bced;
+        transition: color, background-color, border, 0.7s;
+        will-change: color, background-color, border;
+      }
+      &__button_read:hover {
+        border: 1px solid #85bced;
+        background-color: transparent;
+        color: $white-color;
       }
       &__button_find {
         border: 1px solid #85bced;
         background-color: transparent;
         color: $white-color;
+        transition: color, background-color, border, 0.7s;
+        will-change: color, background-color, border;
+      }
+      &__button_find:hover {
+        border: none;
+        background-color: #85bced;
+        color: #000;
       }
     }
   }

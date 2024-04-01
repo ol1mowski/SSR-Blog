@@ -1,13 +1,13 @@
 import Category from "@/Components/Category/Category.component";
 import Footer from "@/Components/Footer/Footer.component";
 import LatestVideo from "@/Components/LatestVideo/LatestVideo.component";
+import MainComponent from "@/Components/Main/Main.component";
 import PostsList from "@/Components/Posts/PostList.component";
-import SliderComponent from "@/Components/Slider/Slider";
 
 function page() {
   return (
     <>
-      {/* <SliderComponent /> */}
+      <MainComponent />
       <Category />
       <LatestVideo />
       <PostsList />

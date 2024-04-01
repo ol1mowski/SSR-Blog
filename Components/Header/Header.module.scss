@@ -1,71 +1,64 @@
 @import "@/sass/settings.scss";
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
   padding: 1rem 2rem;
   background-color: $background-color;
-  box-shadow: $box-shadow;
+  padding-bottom: 1rem;
+  border-bottom: 0.1px solid #fff;
   @include d-flex;
   justify-content: space-between;
   width: 100vw;
-
   transition: all 1s ease-in;
 
-  @media screen and (min-width: $tablet) {
-    padding-left: 2rem;
-  }
-
-  @media screen and (min-width: $big-tablets) {
-    padding: 1rem 2rem;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding: 2rem 7rem;
+  &__logoSection {
+    @include d-flex;
+    &__logo {
+      font-size: 2rem;
+      background: linear-gradient(90deg, #85bced, #83e6e6, #48e77e);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &__span {
+        color: #fff;
+        -webkit-text-fill-color: #fff;
+      }
+    }
   }
 
   &__navMenu {
     display: none;
     @media screen and (min-width: $big-tablets) {
       @include d-flex;
-      margin-right: 1rem;
-      gap: 1rem;
+      gap: 5rem;
     }
     &__nav {
       @include d-flex;
+      border-right: 0.5px solid #fff;
     }
 
     &__items {
       @include d-flex;
       list-style-type: none;
-      @include header;
-      font-size: 1rem;
-      @media screen and (min-width: $desktop) {
-        margin-left: 10rem;
-        font-size: 1.3rem;
-      }
-      &__link_active {
-        font-weight: bold;
-      }
       &__item {
-        @include items-will-hover;
         margin-right: 2rem;
-        color: $items-color;
+        font-weight: 100;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        padding: 0.5rem 1rem;
+        color: $white-color;
+        transition: color, scale, box-shadow 0.7s;
+        border-radius: 0.3rem;
       }
       &__item:hover {
-        @include items-hover-effect;
+        scale: 1.05;
+        color: #85bced;
+        box-shadow: $box-shadow;
+        background: #e0e1e322;
       }
     }
   }
-
-  &__logoSection {
-    @include d-flex;
-    &__img {
-      padding-top: 0.5rem;
-      padding-right: 1rem;
-    }
-  }
-}
-.header:hover {
-  background: #d7d7f0c1;
 }
 
 @keyframes showMenu {

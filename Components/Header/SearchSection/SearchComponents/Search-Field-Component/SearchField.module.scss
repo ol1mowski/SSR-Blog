@@ -1,18 +1,20 @@
 @import "@/sass/settings.scss";
 
-
 .searchSection {
   position: fixed;
   backdrop-filter: blur(5px);
   height: 100vh;
   width: 100vw;
   left: 0;
-  top: 0;
+  top: 0vh;
   z-index: 1;
   @include d-flex;
   &__searchPlace {
     border-radius: 0.5rem;
     @include d-flex;
+    position: absolute;
+    top: 0.7rem;
+    border: 2px solid #85bced;
     &__btn {
       @include btn;
       border-radius: 0 0.7rem 0.7rem 0;

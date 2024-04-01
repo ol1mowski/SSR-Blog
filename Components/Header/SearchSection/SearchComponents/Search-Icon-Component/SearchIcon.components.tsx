@@ -1,4 +1,7 @@
+import Image from "next/image";
 import s from "./SearchIcon.components.module.scss";
+
+import img from '@/assets/search.png';
 
 type SearchIconProps = {
   showSearchSectionHandler: () => void;
@@ -7,13 +10,13 @@ type SearchIconProps = {
 const SearchIcon = ({ showSearchSectionHandler }: SearchIconProps) => {
   return (
     <>
-      <img
+      <Image
         onClick={showSearchSectionHandler}
         className={s.search}
         width="20"
         height="20"
-        src="https://img.icons8.com/ios/50/000000/search--v1.png"
-        alt="search--v1"
+        src={img}
+        alt="search icon"
       />
     </>
   );

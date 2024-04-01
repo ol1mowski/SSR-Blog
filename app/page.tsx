@@ -7,7 +7,7 @@ import SliderComponent from "@/Components/Slider/Slider";
 function page() {
   return (
     <>
-      <SliderComponent />
+      {/* <SliderComponent /> */}
       <Category />
       <LatestVideo />
       <PostsList />

@@ -15,7 +15,7 @@ const HomepageComponent = () => {
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= text.length) {
-        setDisplayedText((prevText) => text.substring(0, currentIndex));
+        setDisplayedText(() => text.substring(0, currentIndex));
         currentIndex++;
       } else {
         clearInterval(interval);
@@ -54,11 +54,17 @@ const HomepageComponent = () => {
           >
             Czytaj
           </button>
-          <button
-            className={`${s.homepageContainer__content__buttonWrapper__button} ${s.homepageContainer__content__buttonWrapper__button_find}`}
+          <a
+            href="https://it.pracuj.pl/praca"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Znajdź pracę
-          </button>
+            <button
+              className={`${s.homepageContainer__content__buttonWrapper__button} ${s.homepageContainer__content__buttonWrapper__button_find}`}
+            >
+              Znajdź pracę
+            </button>
+          </a>
         </div>
       </section>
     </section>

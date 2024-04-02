@@ -23,6 +23,10 @@
           width: 40rem;
           height: 25rem;
         }
+        @media screen and (min-width: $large-desktop) {
+          width: 50rem;
+          height: 35rem;
+        }
       }
     }
     &__img {
@@ -56,6 +60,9 @@
         @media screen and (min-width: $desktop) {
           font-size: 6rem;
           width: 30rem;
+        }
+        @media screen and (min-width: $large-desktop) {
+          font-size: 7rem;
         }
       }
     }

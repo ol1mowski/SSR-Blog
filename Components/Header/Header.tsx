@@ -22,15 +22,28 @@ const Header = () => {
         <section className={s.header__navMenu}>
           <div className={s.header__navMenu__nav}>
             <ul className={s.header__navMenu__items}>
-              <Link href={"/"}>
-                <li className={s.header__navMenu__items__item}>Home</li>
-              </Link>{" "}
-              <a href="https://oliwiermarkiewicz.netlify.app/" target="_blank">
-                <li className={s.header__navMenu__items__item}>O Autorze</li>
-              </a>{" "}
-              <a href="https://it.pracuj.pl/praca" target="_blank">
-                <li className={s.header__navMenu__items__item}>Praca w IT</li>
-              </a>{" "}
+              <li className={s.header__navMenu__items__item}>Home</li>
+              <li>
+                {" "}
+                <a
+                  className={s.header__navMenu__items__item}
+                  href="https://oliwiermarkiewicz.netlify.app/"
+                  target="_blank"
+                >
+                  O Autorze
+                </a>
+              </li>
+
+              <li>
+                {" "}
+                <a
+                  className={s.header__navMenu__items__item}
+                  href="https://it.pracuj.pl/praca"
+                  target="_blank"
+                >
+                  Praca w IT
+                </a>
+              </li>
             </ul>
           </div>
           <SearchSetion />

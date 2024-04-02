@@ -21,6 +21,7 @@
     }
     &__title {
       @include header;
+      color: $white-color;
     }
     &__content {
       @include p;
@@ -63,6 +64,7 @@
         &__header {
           font-size: 1.4rem;
           font-weight: 500;
+          color: $white-color;
         }
         &__subtitle {
           @include p;
@@ -70,7 +72,8 @@
       }
     }
     &__imageWrapper:hover {
-      scale: 1.1;
+      scale: 1.05;
+      background-color: #e0e1e322;
       box-shadow: $box-shadow;
     }
   }

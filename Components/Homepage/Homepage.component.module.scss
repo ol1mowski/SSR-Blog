@@ -69,14 +69,15 @@
     &__description {
       width: 100%;
       &__p {
-        color: #808080;
+        color: #ffffffb4;
+
         @media screen and (min-width: $mobile) {
           width: 30rem;
           font-size: 1.1rem;
           line-height: 1.5rem;
         }
         @media screen and (min-width: $big-tablets) {
-          width: 20rem;
+          width: 30rem;
         }
       }
     }

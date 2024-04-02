@@ -39,7 +39,7 @@ $box-shadow-category: 1px 1px 1px 1px $blue-color;
 }
 
 @mixin header() {
-  color: $dark-color;
+  color: $white-color;
   font-size: 1.5rem;
   font-weight: bold;
   font-family: "Kanit", sans-serif;
@@ -47,7 +47,7 @@ $box-shadow-category: 1px 1px 1px 1px $blue-color;
 
 @mixin below-headers() {
   text-align: center;
-  color: $dark-color;
+  color: $white-color;
   font-size: 1.5rem;
   line-height: 1.4;
   margin-top: 1rem;
@@ -78,7 +78,7 @@ $box-shadow-category: 1px 1px 1px 1px $blue-color;
 }
 
 @mixin p() {
-  color: rgb(115 115 115);
+  color: #ffffffb4;
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.6;

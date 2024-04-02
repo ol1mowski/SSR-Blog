@@ -21,6 +21,7 @@
     }
     &__title {
       @include header;
+      color: $white-color;
     }
     &__content {
       @include p;
@@ -62,6 +63,7 @@
     &__imageWrapper:hover {
       scale: 1.1;
       box-shadow: $box-shadow;
+      background-color: #e0e1e322;
     }
   }
 }

@@ -1,9 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import s from "./Homepage.component.module.scss";
 
 import img from "@/assets/gif.gif";
+import { useEffect, useState } from "react";
 
 const HomepageComponent = () => {
+  const text = "Blog dla Twórców Stron </>";
+
+  const [displayedText, setDisplayedText] = useState("");
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= text.length) {
+        setDisplayedText((prevText) => text.substring(0, currentIndex));
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [text]);
+
   return (
     <section className={s.homepageContainer}>
       <section className={s.homepageContainer__image}>
@@ -18,7 +39,7 @@ const HomepageComponent = () => {
       <section className={s.homepageContainer__content}>
         <div className={s.homepageContainer__content__title}>
           <h1 className={s.homepageContainer__content__title__h1}>
-            Blog dla Twórców Stron
+            {displayedText}
           </h1>
         </div>
         <div className={s.homepageContainer__content__description}>

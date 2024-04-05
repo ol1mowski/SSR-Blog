@@ -1,79 +1,114 @@
 @import "@/sass/settings.scss";
 
 .categoryContainer {
-  scroll-margin: 20rem;
-  width: 90vw;
-  margin: 2rem auto;
   @include d-flex-column;
-  margin-top: 5rem;
-  gap: 1rem;
-  @media screen and (min-width: $desktop) {
-    width: 85rem;
-  }
-  &__header {
-    width: 100%;
-    @include d-flex-column;
-    gap: 0.5rem;
-    padding: 0 1rem;
-    align-items: flex-start;
-    @media screen and (min-width: $mobile) {
-      padding-left: 5rem;
-    }
-    &__title {
-      @include header;
-      color: $white-color;
-    }
-    &__content {
-      @include p;
-    }
-  }
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 3rem;
+
   &__content {
     @include d-flex-column;
-    cursor: pointer;
-    @media screen and (min-width: $small-desktop) {
-      flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50%;
+    gap: 1rem;
+    padding: 1rem;
+    @media screen and (min-width: $mobile) {
+      padding-right: 3rem;
     }
-    &__imageWrapper {
-      @include d-flex-column;
-      gap: 1rem;
-      align-items: flex-start;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      transition: scale 0.7s;
-      will-change: scale;
-      @media screen and (min-width: $large-desktop) {
-        padding: 2rem;
-      }
-      &__img {
-        border-radius: 0.5rem;
+
+    &__title {
+      width: 100%;
+      &__h1 {
+        font-weight: 900;
+        font-size: 3.5rem;
+        color: $white-color;
         @media screen and (min-width: $mobile) {
-          width: 20rem;
-          height: 15rem;
+          font-size: 6rem;
         }
-        @media screen and (min-width: $small-desktop) {
-          width: 11rem;
-          height: 6.5rem;
+        @media screen and (min-width: $big-tablets) {
+          font-size: 5rem;
         }
         @media screen and (min-width: $desktop) {
-          width: 15rem;
-          height: 10rem;
+          font-size: 6rem;
         }
-      }
-      &__text {
-        padding-left: 1rem;
-        &__header {
-          font-size: 1.4rem;
-          font-weight: 500;
-          color: $white-color;
-        }
-        &__subtitle {
-          @include p;
+        @media screen and (min-width: $large-desktop) {
+          font-size: 7rem;
         }
       }
     }
-    &__imageWrapper:hover {
+    &__description {
+      width: 100%;
+      &__p {
+        color: #dedede;
+
+        @media screen and (min-width: $mobile) {
+          width: 40rem;
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+  &__categoryList {
+    width: 100vw;
+    @include d-flex-column;
+    gap: 2rem;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+    }
+    &__wrapper {
+      cursor: pointer;
+      @include d-flex-column;
+      border: 1px solid $light-blue-color;
+      padding: 1rem;
+      gap: 1rem;
+      border-radius: 0.5rem;
+      transition: background-color, scale, .7s;
+      &__header {
+        @include d-flex-column;
+        gap: 1rem;
+        align-items: flex-start;
+        &__img {
+          border-radius: 0.5rem;
+        }
+        &__title {
+          margin-left: 1rem;
+          color: $white-color;
+        }
+      }
+      &__description {
+        border: 1px solid $light-blue-color;
+        width: 15rem;
+        padding: 1rem;
+        border-top-left-radius: 0.7rem;
+        border-bottom-right-radius: 0.7rem;
+        &__p {
+          color: #dedede;
+        }
+      }
+      &__buttonWrapper {
+        @include d-flex;
+        width: 100%;
+        margin-top: 1rem;
+        &__btn {
+          width: 10rem;
+          height: 2.5rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          color: $dark-color;
+          background-color: $light-blue-color;
+          transition: scale 0.7s;
+          border: none;
+        }
+        &__btn:hover {
+          scale: 1.05;
+        }
+      }
+    }
+    &__wrapper:hover {
       scale: 1.05;
-      background-color: #e0e1e322;
+      background-color: $light-dark-color;
       box-shadow: $box-shadow;
     }
   }

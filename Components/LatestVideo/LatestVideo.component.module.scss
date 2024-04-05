@@ -17,6 +17,7 @@
       @include d-flex;
       padding-top: 3rem;
       &__img {
+        cursor: pointer;
         border-radius: 0.5rem;
         @media screen and (min-width: $desktop) {
           width: 40rem;

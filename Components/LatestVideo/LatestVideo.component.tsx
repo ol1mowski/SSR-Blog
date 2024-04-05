@@ -38,7 +38,7 @@ const LatestVideo = () => {
         <div className={s.lastVideoContainer__image__imageWrapper}>
           <Image
             width={300}
-            height={300}
+            height={250}
             className={s.lastVideoContainer__image__imageWrapper__img}
             src={img}
             alt="My last video miniature image"

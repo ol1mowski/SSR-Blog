@@ -1,69 +1,101 @@
 @import "@/sass/settings.scss";
 
-.latestVideoContainer {
-  scroll-margin: 20rem;
-  width: 90vw;
-  margin: 2rem auto;
-  @include d-flex-column;
-  margin-top: 5rem;
-  gap: 1rem;
-  @media screen and (min-width: $desktop) {
-    width: 85rem;
+.lastVideoContainer {
+  height: 100vh;
+  @media screen and (min-width: $big-tablets) {
+    @include d-flex;
   }
-  &__header {
-    width: 100%;
-    @include d-flex-column;
-    gap: 0.5rem;
-    padding: 0 1rem;
-    align-items: flex-start;
-    @media screen and (min-width: $mobile) {
-      padding-left: 5rem;
+  @media screen and (min-width: $desktop) {
+    gap: 4rem;
+  }
+
+  &__image {
+    @media screen and (min-width: $big-tablets) {
+      @include d-flex;
     }
-    &__title {
-      @include header;
-      color: $white-color;
+    &__imageWrapper {
+      @include d-flex;
+      padding-top: 3rem;
+      &__img {
+        border-radius: 0.5rem;
+        @media screen and (min-width: $desktop) {
+          width: 40rem;
+          height: 25rem;
+        }
+        @media screen and (min-width: $large-desktop) {
+          width: 50rem;
+          height: 35rem;
+        }
+      }
     }
-    &__content {
-      @include p;
+    &__img {
+      border-radius: 0.5rem;
     }
   }
   &__content {
     @include d-flex-column;
-    cursor: pointer;
-    @media screen and (min-width: $small-desktop) {
-      flex-direction: row;
+    height: 50%;
+    gap: 1rem;
+    padding: 1rem;
+    @media screen and (min-width: $mobile) {
+      padding-left: 3rem;
     }
-    &__imageWrapper {
-      @include d-flex-column;
-      gap: 1rem;
-      align-items: flex-start;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      transition: scale 0.7s;
-      will-change: scale;
-      @media screen and (min-width: $large-desktop) {
-        padding: 2rem;
-      }
-      &__img {
-        border-radius: 0.5rem;
+
+    &__title {
+      width: 100%;
+      &__h1 {
+        font-weight: 900;
+        font-size: 3.5rem;
+        color: $white-color;
         @media screen and (min-width: $mobile) {
-          width: 20rem;
-          height: 15rem;
+          font-size: 6rem;
+          width: 30rem;
         }
-        @media screen and (min-width: $small-desktop) {
-          width: 15rem;
-          height: 10rem;
+        @media screen and (min-width: $big-tablets) {
+          font-size: 5rem;
+          width: 20rem;
         }
         @media screen and (min-width: $desktop) {
-          width: 20rem;
-          height: 15rem;
+          font-size: 6rem;
+          width: 30rem;
+        }
+        @media screen and (min-width: $large-desktop) {
+          font-size: 7rem;
         }
       }
     }
-    &__imageWrapper:hover {
-      scale: 1.1;
-      box-shadow: $box-shadow;
-      background-color: #e0e1e322;
+    &__description {
+      width: 100%;
+      &__p {
+        color: #dedede;
+
+        @media screen and (min-width: $mobile) {
+          width: 30rem;
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+        }
+        @media screen and (min-width: $big-tablets) {
+          width: 30rem;
+        }
+      }
+    }
+    &__buttonWrapper {
+      @include d-flex;
+      width: 100%;
+      margin-top: 1rem;
+      &__button {
+        width: 10rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        color: #fff;
+        background-color: #ff0000;
+        transition: scale 0.7s;
+        border: none;
+      }
+      &__button:hover {
+        scale: 1.05;
+      }
     }
   }
 }

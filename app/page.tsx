@@ -8,8 +8,8 @@ function page() {
   return (
     <>
       <MainComponent />
-      <Category />
       <LatestVideo />
+      <Category />
       <PostsList />
       <Footer />
     </>

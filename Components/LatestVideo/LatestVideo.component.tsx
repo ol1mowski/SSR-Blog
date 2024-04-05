@@ -1,57 +1,52 @@
+"use client";
+
 import Image from "next/image";
 import s from "./LatestVideo.component.module.scss";
 
-import img from "@/assets/react.webp";
+import img from "@/assets/lastVideo.png";
 
-function LatestVideo() {
+const LatestVideo = () => {
   return (
-    <section className={s.latestVideoContainer}>
-      <section className={s.latestVideoContainer__header}>
-        <h2 className={s.latestVideoContainer__header__title}>
-          My Latest Videos from YouTube 🎬 🎥 🔴 ▶
-        </h2>
-        <p className={s.latestVideoContainer__header__content}>
-          See my latest videos from YouTube where I explain how to learn
-          programming
-        </p>
+    <section className={s.lastVideoContainer}>
+      <section className={s.lastVideoContainer__content}>
+        <div className={s.lastVideoContainer__content__title}>
+          <h1 className={s.lastVideoContainer__content__title__h1}>
+            Zabacz mój ostatni odcinek
+          </h1>
+        </div>
+        <div className={s.lastVideoContainer__content__description}>
+          <p className={s.lastVideoContainer__content__description__p}>
+            Znajdziesz tu konkrety o pracy w branży it, Najnowocześniejsze
+            rozwiązania w branży, oraz praktyczne porady i wiele więcej
+          </p>
+        </div>
+        <div className={s.lastVideoContainer__content__buttonWrapper}>
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              className={s.lastVideoContainer__content__buttonWrapper__button}
+            >
+              Zobacz na YouTube
+            </button>
+          </a>
+        </div>
       </section>
-      <section className={s.latestVideoContainer__content}>
-        <a href="">
-          <div className={s.latestVideoContainer__content__imageWrapper}>
-            <Image
-              className={s.latestVideoContainer__content__imageWrapper__img}
-              src={img}
-              alt=""
-              width={200}
-              height={150}
-            />
-          </div>
-        </a>
-        <a href="">
-          <div className={s.latestVideoContainer__content__imageWrapper}>
-            <Image
-              className={s.latestVideoContainer__content__imageWrapper__img}
-              src={img}
-              alt=""
-              width={200}
-              height={150}
-            />
-          </div>
-        </a>
-        <a href="">
-          <div className={s.latestVideoContainer__content__imageWrapper}>
-            <Image
-              className={s.latestVideoContainer__content__imageWrapper__img}
-              src={img}
-              alt=""
-              width={200}
-              height={150}
-            />
-          </div>
-        </a>
+      <section className={s.lastVideoContainer__image}>
+        <div className={s.lastVideoContainer__image__imageWrapper}>
+          <Image
+            width={300}
+            height={300}
+            className={s.lastVideoContainer__image__imageWrapper__img}
+            src={img}
+            alt="My last video miniature image"
+          />
+        </div>
       </section>
     </section>
   );
-}
+};
 
 export default LatestVideo;

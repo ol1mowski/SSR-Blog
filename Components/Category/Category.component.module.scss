@@ -25,7 +25,7 @@
         font-size: 3rem;
         color: $white-color;
         @media screen and (min-width: $mobile) {
-          font-size: 5rem;
+          font-size: 3rem;
         }
         @media screen and (min-width: $big-tablets) {
           font-size: 4rem;
@@ -41,7 +41,7 @@
     &__description {
       width: 100%;
       &__p {
-        color: #dedede;
+        color: $white-description-color;
 
         @media screen and (min-width: $mobile) {
           width: 40rem;
@@ -58,8 +58,10 @@
     width: 100vw;
     @include d-flex-column;
     gap: 2rem;
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $small-desktop) {
       flex-direction: row;
+    }
+    @media screen and (min-width: $desktop) {
       gap: 5rem;
     }
     @media screen and (min-width: $large-desktop) {
@@ -95,7 +97,7 @@
         border-top-left-radius: 0.7rem;
         border-bottom-right-radius: 0.7rem;
         &__p {
-          color: #dedede;
+          color: $white-description-color;
         }
       }
       &__buttonWrapper {

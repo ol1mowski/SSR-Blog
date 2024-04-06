@@ -78,6 +78,9 @@
         @media screen and (min-width: $big-tablets) {
           width: 30rem;
         }
+        @media screen and (min-width: $large-desktop) {
+          font-size: 1.3rem;
+        }
       }
     }
     &__buttonWrapper {
@@ -93,6 +96,11 @@
         background-color: #ff0000;
         transition: scale 0.7s;
         border: none;
+        @media screen and (min-width: $large-desktop) {
+          font-size: 1.2rem;
+          width: 13rem;
+          height: 3.5rem;
+        }
       }
       &__button:hover {
         scale: 1.05;

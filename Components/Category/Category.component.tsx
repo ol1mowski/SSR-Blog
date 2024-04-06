@@ -3,6 +3,9 @@ import s from "./Category.component.module.scss";
 
 import img from "@/assets/react.webp";
 
+import imgEdu from "@/assets/edu.jpg";
+import imgProg from "@/assets/prog.jpg";
+
 const Category = () => {
   return (
     <section className={s.categoryContainer}>
@@ -47,8 +50,8 @@ const Category = () => {
                 s.categoryContainer__categoryList__wrapper__description__p
               }
             >
-              Posty o tej tematyce będą związane z najpopularniejszym
-              frameworkiem w JavaScript. Chcesz dowiedzieć się więcej ?{" "}
+              Praktyczne wskazówki, tutoriale i analizy dotyczące wykorzystania
+              React w projektach.
             </p>
           </div>
           <div
@@ -71,7 +74,7 @@ const Category = () => {
               className={
                 s.categoryContainer__categoryList__wrapper__header__img
               }
-              src={img}
+              src={imgEdu}
               width={250}
               height={150}
               alt="category image"
@@ -81,7 +84,7 @@ const Category = () => {
                 s.categoryContainer__categoryList__wrapper__header__title
               }
             >
-              React
+              Materiały Edukacyjne
             </h3>
           </div>
           <div
@@ -92,8 +95,8 @@ const Category = () => {
                 s.categoryContainer__categoryList__wrapper__description__p
               }
             >
-              Posty o tej tematyce będą związane z najpopularniejszym
-              frameworkiem w JavaScript. Chcesz dowiedzieć się więcej ?{" "}
+              Zestawy narzędzi, kursy online i inne materiały, które pomogą Ci w
+              rozwoju jako programista. 😉
             </p>
           </div>
           <div
@@ -116,7 +119,7 @@ const Category = () => {
               className={
                 s.categoryContainer__categoryList__wrapper__header__img
               }
-              src={img}
+              src={imgProg}
               width={250}
               height={150}
               alt="category image"
@@ -126,7 +129,7 @@ const Category = () => {
                 s.categoryContainer__categoryList__wrapper__header__title
               }
             >
-              React
+              Programowanie Ogólne
             </h3>
           </div>
           <div
@@ -137,8 +140,8 @@ const Category = () => {
                 s.categoryContainer__categoryList__wrapper__description__p
               }
             >
-              Posty o tej tematyce będą związane z najpopularniejszym
-              frameworkiem w JavaScript. Chcesz dowiedzieć się więcej ?{" "}
+              Wprowadzenie do różnych języków i koncepcji programowania dla
+              początkujących.
             </p>
           </div>
           <div

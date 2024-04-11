@@ -24,8 +24,9 @@
           height: 25rem;
         }
         @media screen and (min-width: $large-desktop) {
-          width: 50rem;
-          height: 35rem;
+          width: 55rem;
+          height: 40rem;
+          padding-bottom: 4rem;
         }
       }
     }
@@ -36,7 +37,7 @@
   &__content {
     @include d-flex-column;
     height: 50%;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
     @media screen and (min-width: $mobile) {
       padding-left: 3rem;
@@ -60,9 +61,6 @@
           font-size: 6rem;
           width: 30rem;
         }
-        @media screen and (min-width: $large-desktop) {
-          font-size: 7rem;
-        }
       }
     }
     &__description {
@@ -76,7 +74,7 @@
           line-height: 1.5rem;
         }
         @media screen and (min-width: $big-tablets) {
-          width: 30rem;
+          width: 40rem;
         }
         @media screen and (min-width: $large-desktop) {
           font-size: 1.3rem;
@@ -87,6 +85,9 @@
       @include d-flex;
       width: 100%;
       margin-top: 1rem;
+      @media screen and (min-width: $small-desktop) {
+        justify-content: flex-start;
+      }
       &__button {
         width: 10rem;
         height: 2.5rem;

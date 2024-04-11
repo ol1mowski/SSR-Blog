@@ -31,7 +31,7 @@ const Category = () => {
               }
               src={img}
               width={250}
-              height={150}
+              height={200}
               alt="category image"
             />
             <h3
@@ -76,7 +76,7 @@ const Category = () => {
               }
               src={imgEdu}
               width={250}
-              height={150}
+              height={200}
               alt="category image"
             />
             <h3
@@ -121,7 +121,7 @@ const Category = () => {
               }
               src={imgProg}
               width={250}
-              height={150}
+              height={200}
               alt="category image"
             />
             <h3

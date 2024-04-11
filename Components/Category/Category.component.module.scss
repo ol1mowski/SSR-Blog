@@ -13,9 +13,6 @@
     height: 50%;
     gap: 1rem;
     padding: 1rem;
-    @media screen and (min-width: $mobile) {
-      padding-right: 3rem;
-    }
 
     &__title {
       width: 100%;
@@ -44,12 +41,13 @@
         color: $white-description-color;
 
         @media screen and (min-width: $mobile) {
-          width: 40rem;
+          width: 33rem;
           font-size: 1.1rem;
           line-height: 1.5rem;
         }
         @media screen and (min-width: $large-desktop) {
           font-size: 1.3rem;
+          width: 40rem;
         }
       }
     }

@@ -56,10 +56,8 @@
     width: 100vw;
     @include d-flex-column;
     gap: 2rem;
-    @media screen and (min-width: $small-desktop) {
-      flex-direction: row;
-    }
     @media screen and (min-width: $desktop) {
+      flex-direction: row;
       gap: 5rem;
     }
     @media screen and (min-width: $large-desktop) {
@@ -86,6 +84,9 @@
         &__title {
           margin-left: 1rem;
           color: $white-color;
+          @media screen and (min-width: $desktop) {
+            font-size: 1.6rem;
+          }
         }
       }
       &__description {
@@ -94,8 +95,14 @@
         padding: 1rem;
         border-top-left-radius: 0.7rem;
         border-bottom-right-radius: 0.7rem;
+        @media screen and (min-width: $desktop) {
+          width: 20rem;
+        }
         &__p {
           color: $white-description-color;
+          @media screen and (min-width: $desktop) {
+            font-size: 1.4rem;
+          }
         }
       }
       &__buttonWrapper {

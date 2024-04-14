@@ -70,7 +70,13 @@ const Footer = () => {
                 style.footerContainer__footerContent__socialWrapper__privacy
               }
             >
-              <span>Polityka prywatności</span>
+              <span
+                className={
+                  style.footerContainer__footerContent__socialWrapper__privacy__content
+                }
+              >
+                Polityka prywatności
+              </span>
             </div>
             <div
               className={

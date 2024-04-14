@@ -1,8 +1,8 @@
 @import "@/sass/settings.scss";
 
 .lastVideoContainer {
-  height: 100vh;
-  @media screen and (min-width: $big-tablets) {
+  margin-bottom: 3rem;
+  @media screen and (min-width: $small-desktop) {
     @include d-flex;
   }
   @media screen and (min-width: $desktop) {
@@ -19,8 +19,8 @@
       &__img {
         cursor: pointer;
         border-radius: 0.5rem;
-        @media screen and (min-width: $desktop) {
-          width: 40rem;
+        @media screen and (min-width: $small-desktop) {
+          width: 30rem;
           height: 25rem;
         }
         @media screen and (min-width: $large-desktop) {
@@ -55,9 +55,9 @@
         }
         @media screen and (min-width: $big-tablets) {
           font-size: 5rem;
-          width: 20rem;
+          width: 40rem;
         }
-        @media screen and (min-width: $desktop) {
+        @media screen and (min-width: $small-desktop) {
           font-size: 6rem;
           width: 30rem;
         }
@@ -72,9 +72,6 @@
           width: 30rem;
           font-size: 1.1rem;
           line-height: 1.5rem;
-        }
-        @media screen and (min-width: $big-tablets) {
-          width: 40rem;
         }
         @media screen and (min-width: $large-desktop) {
           font-size: 1.3rem;

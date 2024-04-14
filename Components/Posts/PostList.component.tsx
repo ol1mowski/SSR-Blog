@@ -10,9 +10,6 @@ function PostsList() {
     <section className={s.PostListContainer}>
       <section className={s.PostListContainer__header}>
         <h2 className={s.PostListContainer__header__title}>Last posts 📰</h2>
-        <p className={s.PostListContainer__header__content}>
-          Read the latest post on my blog
-        </p>
       </section>
       <section className={s.PostListContainer__content}>
         <div className={s.PostListContainer__content__postWrapper}>
@@ -47,15 +44,14 @@ function PostsList() {
                   s.PostListContainer__content__postWrapper__post__content__title
                 }
               >
-                How to start learn react in 2024 ?
+                Jak zacząć się uczyć React w 2024 roku ?
               </h3>
               <p
                 className={
                   s.PostListContainer__content__postWrapper__post__content__description
                 }
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                consequatur eligendi maiores eum, dolore harum{" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
             <section
@@ -133,15 +129,14 @@ function PostsList() {
                   s.PostListContainer__content__postWrapper__post__content__title
                 }
               >
-                How to start learn react in 2024 ?
+                Jak zacząć się uczyć React w 2024 roku ?
               </h3>
               <p
                 className={
                   s.PostListContainer__content__postWrapper__post__content__description
                 }
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-                consequatur eligendi maiores eum, dolore harum{" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
               </p>
             </div>
             <section

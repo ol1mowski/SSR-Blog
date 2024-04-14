@@ -127,7 +127,7 @@
     }
     &__post {
       @include d-flex;
-      gap: 0.5rem;
+      gap: 1rem;
 
       @media screen and (min-width: $large-desktop) {
         gap: 2rem;

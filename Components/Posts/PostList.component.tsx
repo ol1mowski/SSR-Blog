@@ -9,7 +9,7 @@ function PostsList() {
   return (
     <section className={s.PostListContainer}>
       <section className={s.PostListContainer__header}>
-        <h2 className={s.PostListContainer__header__title}>Last posts 📰</h2>
+        <h2 className={s.PostListContainer__header__title}>Ostatnie posty 📰</h2>
       </section>
       <section className={s.PostListContainer__content}>
         <div className={s.PostListContainer__content__postWrapper}>

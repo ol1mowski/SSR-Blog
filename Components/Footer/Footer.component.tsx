@@ -60,7 +60,13 @@ const Footer = () => {
           <section
             className={style.footerContainer__footerContent__copyrightWrapper}
           >
-            <span>Made By Oliwier Markiewicz</span>
+            <span
+              className={
+                style.footerContainer__footerContent__copyrightWrapper__author
+              }
+            >
+              Made By Oliwier Markiewicz
+            </span>
           </section>
           <section
             className={style.footerContainer__footerContent__socialWrapper}
@@ -83,9 +89,33 @@ const Footer = () => {
                 style.footerContainer__footerContent__socialWrapper__social
               }
             >
-              <Image src={github} alt="" width={50} height={50} />
-              <Image src={linkedin} alt="" width={50} height={50} />
-              <Image src={yt} alt="" width={50} height={50} />
+              <Image
+                className={
+                  style.footerContainer__footerContent__socialWrapper__social__icon
+                }
+                src={github}
+                alt=""
+                width={50}
+                height={50}
+              />
+              <Image
+                className={
+                  style.footerContainer__footerContent__socialWrapper__social__icon
+                }
+                src={linkedin}
+                alt=""
+                width={50}
+                height={50}
+              />
+              <Image
+                className={
+                  style.footerContainer__footerContent__socialWrapper__social__icon
+                }
+                src={yt}
+                alt=""
+                width={50}
+                height={50}
+              />
             </div>
           </section>
         </section>

@@ -35,26 +35,53 @@ const Footer = () => {
             </div>
             <div
               className={
-                style.footerContainer__newsletterWrapper__container__newsletter
+                style.footerContainer__newsletterWrapper__container__form
               }
             >
-              <input placeholder="Podaj swój email" type="text" name="" id="" />
-              <button>Dołącz</button>
+              <input
+                className={
+                  style.footerContainer__newsletterWrapper__container__form__input
+                }
+                placeholder="Podaj swój email"
+                type="text"
+                name="email"
+              />
+              <button
+                className={
+                  style.footerContainer__newsletterWrapper__container__form__btn
+                }
+              >
+                Dołącz
+              </button>
             </div>
           </div>
         </section>
-        <section className={style.footerContainer__copyrightWrapper}>
-          <span>Made By Oliwier Markiewicz</span>
-        </section>
-        <section className={style.footerContainer__socialWrapper}>
-          <div className={style.footerContainer__socialWrapper__privacy}>
-            <span>Polityka prywatności</span>
-          </div>
-          <div className={style.footerContainer__socialWrapper__social}>
-            <Image src={github} alt="" width={50} height={50} />
-            <Image src={linkedin} alt="" width={50} height={50} />
-            <Image src={yt} alt="" width={50} height={50} />
-          </div>
+        <section className={style.footerContainer__footerContent}>
+          <section
+            className={style.footerContainer__footerContent__copyrightWrapper}
+          >
+            <span>Made By Oliwier Markiewicz</span>
+          </section>
+          <section
+            className={style.footerContainer__footerContent__socialWrapper}
+          >
+            <div
+              className={
+                style.footerContainer__footerContent__socialWrapper__privacy
+              }
+            >
+              <span>Polityka prywatności</span>
+            </div>
+            <div
+              className={
+                style.footerContainer__footerContent__socialWrapper__social
+              }
+            >
+              <Image src={github} alt="" width={50} height={50} />
+              <Image src={linkedin} alt="" width={50} height={50} />
+              <Image src={yt} alt="" width={50} height={50} />
+            </div>
+          </section>
         </section>
       </footer>
     </>

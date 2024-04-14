@@ -1,43 +1,50 @@
 @import "@/sass/settings.scss";
 
 .footerContainer {
-  @include d-flex;
+  @include d-flex-column;
   margin-top: 5rem;
   padding: 5rem 0;
   background-color: #1e2433;
   color: $white-color;
   font-family: "Times New Roman", Times, serif;
-  &__wrapper {
-    width: 80%;
-    @include d-flex-column;
-    @media screen and (min-width: 530px) {
-      @include d-flex;
-      gap: calc(10vw + 3rem);
-    }
-    gap: 2rem;
-    &__policy {
+  gap: 4rem;
+  &__newsletterWrapper {
+    @include d-flex;
+    &__container {
+      @include d-flex-column;
+      padding: 1rem;
+      border: 2px solid $light-blue-color;
+      border-radius: 0.5rem;
       &__content {
-        font-size: 1.2rem;
-        cursor: pointer;
-        font-weight: bold;
+        @include d-flex-column;
+        gap: 0.5rem;
+        &__title {
+          color: #dedede;
+        }
+        &__description {
+          color: #dedede;
+        }
       }
-    }
-    &__icons {
-      @include d-flex;
-      gap: 1rem;
-      &__a {
-        color: #fff;
-        will-change: transform;
-      }
-      &__a:hover {
-        animation: hoop 1s linear;
+      &__form {
+        margin-top: 1rem;
+        @include d-flex;
+        gap: 1rem;
+        &__input {
+          border: 1px solid $light-blue-color;
+          border-radius: 0.3rem;
+          padding: 0.7rem 0.5rem;
+        }
+        &__btn {
+          border-radius: 0.3rem;
+          padding: 0.7rem 0.5rem;
+          background-color: $light-blue-color;
+          border: none;
+        }
       }
     }
   }
-}
-
-@keyframes hoop {
-  50% {
-    transform: translateY(-0.5rem);
+  &__footerContent {
+    @include d-flex-column;
+    flex-direction: column-reverse;
   }
 }

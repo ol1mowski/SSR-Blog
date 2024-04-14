@@ -4,9 +4,9 @@
   @include d-flex;
   margin-top: 5rem;
   padding: 5rem 0;
-  background-color: $dark-color;
+  background-color: #1e2433;
   color: $white-color;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   &__wrapper {
     width: 80%;
     @include d-flex-column;
@@ -16,11 +16,11 @@
     }
     gap: 2rem;
     &__policy {
-        &__content {
-            font-size: 1.2rem;
-            cursor: pointer;
-            font-weight: bold;
-        }
+      &__content {
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: bold;
+      }
     }
     &__icons {
       @include d-flex;

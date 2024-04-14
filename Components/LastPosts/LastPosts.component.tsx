@@ -107,6 +107,14 @@ function LastPosts() {
                   Jak zacząć się uczyć React w 2024 roku ?
                 </h3>
 
+                <p
+                  className={
+                    s.lastPostsContainer__otherLastPostWrapper__post__content__description
+                  }
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                </p>
+
                 <div
                   className={
                     s.lastPostsContainer__otherLastPostWrapper__post__content__sub

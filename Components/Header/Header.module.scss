@@ -1,92 +1,28 @@
 @import "@/sass/settings.scss";
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
   padding: 1rem 2rem;
-  background-color: $white-background-color;
-  box-shadow: $box-shadow;
+  background-color: $background-color;
+  padding-bottom: 1rem;
+  border-bottom: 0.1px solid #fff;
   @include d-flex;
   justify-content: space-between;
   width: 100vw;
-
-  background: linear-gradient(
-    90deg,
-    hsla(240, 45%, 89%, 1) 0%,
-    hsla(187, 100%, 89%, 1) 83%
-  );
-
   transition: all 1s ease-in;
 
-
-  @media screen and (min-width: $tablet) {
-    padding-left: 2rem;
-  }
-
-  @media screen and (min-width: $big-tablets) {
-    padding: 1rem 2rem;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding: 2rem 7rem;
-  }
-
-  &__hamburgerMenu {
-    height: 100vh;
-    background-color: $white-background-color;
-    width: 100vw;
-    display: none;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    transform: translateX(-100vw);
-    padding: 2rem;
-    overflow-y: scroll;
-    animation: showMenu 1s linear forwards;
-    &__close {
-      @include d-flex;
-      justify-content: flex-end;
-    }
-    &__nav {
-      height: 90vh;
-      @include d-flex-column;
-      justify-content: flex-start;
-      gap: 3rem;
-      &__search {
-        @include d-flex;
-        &__btn {
-          @include btn;
-          border-radius: 0 0.7rem 0.7rem 0;
-          padding: 0.93rem 1rem;
-          cursor: pointer;
-          background-color: $dark-color;
-        }
-        &__inp {
-          @include inp;
-          border-radius: 0.7rem 0 0 0.7rem;
-          background-color: $dark-color;
-          border: none;
-          padding: 1.1rem 1rem;
-          color: $white-color;
-        }
-      }
-      &__items {
-        color: $items-color;
-        @include d-flex-column;
-        list-style-type: none;
-        align-items: flex-start;
-        gap: 0.5rem;
-        &__link_active {
-          font-weight: bold;
-        }
-        &__item {
-          @include items-will-hover;
-          font-size: 2rem;
-          font-weight: 500;
-          margin-bottom: 0.7rem;
-        }
-        &__item:hover {
-          @include items-hover-effect;
-        }
+  &__logoSection {
+    @include d-flex;
+    &__logo {
+      font-size: 2rem;
+      background: linear-gradient(90deg, #85bced, #83e6e6, #48e77e);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &__span {
+        color: #fff;
+        -webkit-text-fill-color: #fff;
       }
     }
   }
@@ -95,95 +31,34 @@
     display: none;
     @media screen and (min-width: $big-tablets) {
       @include d-flex;
-      margin-right: 1rem;
-      gap: 1rem;
+      gap: 5rem;
     }
     &__nav {
       @include d-flex;
+      border-right: 0.5px solid #fff;
     }
-    &__search {
-      @include items-will-hover;
-      cursor: pointer;
-      display: none;
-      @media screen and (min-width: $big-tablets) {
-        display: flex;
-        margin-right: 1rem;
-      }
-    }
-    &__search:hover {
-      @include items-hover-effect;
-      scale: 1.3;
-    }
+
     &__items {
       @include d-flex;
       list-style-type: none;
-      @include header;
-      font-size: 1rem;
-      &__link_active {
-        font-weight: bold;
-      }
       &__item {
-        @include items-will-hover;
         margin-right: 2rem;
-        color: $items-color;
+        font-weight: 100;
+        font-size: 1rem;
+        cursor: pointer;
+        letter-spacing: 2px;
+        padding: 0.5rem 1rem;
+        color: $white-color;
+        transition: background, scale 0.7s;
+        border-radius: 0.3rem;
       }
       &__item:hover {
-        @include items-hover-effect;
+        color: #85bced;
+        box-shadow: $box-shadow;
+        background-color: #e0e1e322;
       }
     }
   }
-
-  &__logoSection {
-    @include d-flex;
-    gap: 1rem;
-    &__img {
-      padding-top: 0.5rem;
-    }
-  }
-
-  &__hamburgerSection {
-    cursor: pointer;
-
-    @media screen and (min-width: $tablet) {
-      margin-right: 2rem;
-    }
-
-    @media screen and (min-width: $big-tablets) {
-      display: none;
-    }
-  }
-  &__searchSection {
-    position: fixed;
-    backdrop-filter: blur(5px);
-    height: 100vh;
-    width: 100vw;
-    left: 0;
-    top: 0;
-    @include d-flex;
-    display: none;
-    &__searchPlace {
-      border-radius: 0.5rem;
-      @include d-flex;
-      &__btn {
-        @include btn;
-        border-radius: 0 0.7rem 0.7rem 0;
-        padding: 0.93rem 1rem;
-        cursor: pointer;
-        background-color: $dark-color;
-      }
-      &__inp {
-        @include inp;
-        border-radius: 0.7rem 0 0 0.7rem;
-        background-color: $dark-color;
-        border: none;
-        padding: 1.1rem 7rem;
-        color: $white-color;
-      }
-    }
-  }
-}
-.header:hover {
-  background: #d7d7f0c1;
 }
 
 @keyframes showMenu {
@@ -194,8 +69,3 @@
     transform: translateX(0);
   }
 }
-
-// ::placeholder {
-//   color: #dedede;
-//   font-size: 1rem;
-// }

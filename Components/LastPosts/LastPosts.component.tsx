@@ -112,7 +112,8 @@ function LastPosts() {
                     s.lastPostsContainer__otherLastPostWrapper__post__content__description
                   }
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Harum, iure. At odio nobis quibusdam quisquam velit
                 </p>
 
                 <div
@@ -174,6 +175,14 @@ function LastPosts() {
                 >
                   Jak zacząć się uczyć React w 2024 roku ?
                 </h3>
+                <p
+                  className={
+                    s.lastPostsContainer__otherLastPostWrapper__post__content__description
+                  }
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Harum, iure. At odio nobis quibusdam quisquam velit
+                </p>
 
                 <div
                   className={
@@ -234,6 +243,14 @@ function LastPosts() {
                 >
                   Jak zacząć się uczyć React w 2024 roku ?
                 </h3>
+                <p
+                  className={
+                    s.lastPostsContainer__otherLastPostWrapper__post__content__description
+                  }
+                >
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Harum, iure. At odio nobis quibusdam quisquam velit
+                </p>
 
                 <div
                   className={

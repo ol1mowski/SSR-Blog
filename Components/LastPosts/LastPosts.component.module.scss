@@ -45,7 +45,7 @@
     }
     @media screen and (min-width: $large-desktop) {
       width: 40rem;
-      padding-bottom: .5rem;
+      padding-bottom: 1rem;
     }
     &__post {
       @include d-flex-column;
@@ -75,6 +75,9 @@
           @include d-flex;
           justify-content: space-between;
           width: 100%;
+          @media screen and (min-width: $large-desktop) {
+            margin-top: 0.5rem;
+          }
           &__author {
             color: $white-color;
           }
@@ -136,6 +139,7 @@
         width: 80%;
         padding-right: 0.5rem;
         align-items: flex-start;
+
         &__category {
           @include d-flex;
           display: none;
@@ -160,14 +164,19 @@
           }
         }
         &__description {
-          color: #dedede;
-          font-size: 1rem;
-          line-height: 1.7rem;
+          display: none;
+          @media screen and (min-width: $large-desktop) {
+            display: block;
+            color: #dedede;
+          }
         }
         &__sub {
           @include d-flex;
           justify-content: space-between;
           width: 100%;
+          @media screen and (min-width: $large-desktop) {
+            margin-top: 0.5rem;
+          }
           &__author {
             color: $white-color;
             font-size: 0.7rem;

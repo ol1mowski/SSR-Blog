@@ -1,0 +1,11 @@
+@import "@/sass/settings.scss";
+
+.content {
+  @include d-flex-column;
+  height: 50%;
+  gap: 2rem;
+  padding: $standard-padding;
+  @media screen and (min-width: $mobile) {
+    padding-left: 3rem;
+  }
+}

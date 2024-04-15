@@ -6,7 +6,7 @@
     @include d-flex;
   }
   @media screen and (min-width: $desktop) {
-    gap: 4rem;
+    gap: 10rem;
   }
 
   &__image {
@@ -28,7 +28,11 @@
           height: 25rem;
         }
         @media screen and (min-width: $small-desktop) {
-          width: 32rem;
+          width: 25rem;
+          height: 22rem;
+        }
+        @media screen and (min-width: $desktop) {
+          width: 35rem;
           height: 25rem;
         }
         @media screen and (min-width: $large-desktop) {

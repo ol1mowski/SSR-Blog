@@ -1,6 +1,5 @@
 import s from "./PostList.component.module.scss";
 
-import clock from "@/assets/clock.png";
 import PostWrapper from "./Post-Component/PostWrapper.component";
 import { OTHER_POST } from "@/data/Posts.data";
 
@@ -22,12 +21,12 @@ function PostsList() {
             category={p.category}
             time={p.time}
             data={p.data}
-            clock={clock}
+            clock={p.clock}
           />
         ))}
       </section>
       <section className={s.PostListContainer__button}>
-        <button className={s.PostListContainer__button__btn}>More</button>
+        <button className={s.PostListContainer__button__btn}>Więcej</button>
       </section>
     </section>
   );

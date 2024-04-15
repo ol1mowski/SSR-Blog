@@ -18,7 +18,7 @@
       @include d-flex;
       padding-top: 3rem;
       &__img {
-        border-radius: 0.5rem;
+        border-radius: $border-med;
         @media screen and (min-width: $desktop) {
           width: 40rem;
           height: 25rem;
@@ -30,14 +30,14 @@
       }
     }
     &__img {
-      border-radius: 0.5rem;
+      border-radius: $border-med;
     }
   }
   &__content {
     @include d-flex-column;
     height: 100%;
     gap: 1rem;
-    padding-left: 1rem;
+    padding-left: $standard-padding;
     @media screen and (min-width: $mobile) {
       padding-left: 3rem;
     }
@@ -45,31 +45,11 @@
     &__title {
       width: 100%;
       padding-top: 5rem;
-      &__h1 {
-        font-weight: 900;
-        font-size: 4.5rem;
-        color: $white-color;
-        @media screen and (min-width: $mobile) {
-          font-size: 6rem;
-          width: 30rem;
-        }
-        @media screen and (min-width: $big-tablets) {
-          font-size: 5rem;
-          width: 20rem;
-        }
-        @media screen and (min-width: $desktop) {
-          font-size: 6rem;
-          width: 30rem;
-        }
-        @media screen and (min-width: $large-desktop) {
-          font-size: 7rem;
-        }
-      }
     }
     &__description {
       width: 100%;
       &__p {
-        color: #dedede;
+        color: $white-description-color;
 
         @media screen and (min-width: $mobile) {
           width: 30rem;
@@ -93,7 +73,7 @@
       &__button {
         width: 7rem;
         height: 2.5rem;
-        border-radius: 0.5rem;
+        border-radius: $border-med;
         cursor: pointer;
         transition: scale 0.7s;
         @media screen and (min-width: $large-desktop) {
@@ -102,21 +82,21 @@
         }
       }
       &__button:hover {
-        scale: 1.05;
+        scale: $hover-med-scale;
       }
       &__button_read {
         border: none;
-        background-color: #85bced;
+        background-color: $light-blue-color;
         transition: color, background-color, border, 0.7s;
         will-change: color, background-color, border;
       }
       &__button_read:hover {
-        border: 1px solid #85bced;
+        border: 1px solid $light-blue-color;
         background-color: transparent;
         color: $white-color;
       }
       &__button_find {
-        border: 1px solid #85bced;
+        border: 1px solid $light-blue-color;
         background-color: transparent;
         color: $white-color;
         transition: color, background-color, border, 0.7s;
@@ -124,7 +104,7 @@
       }
       &__button_find:hover {
         border: none;
-        background-color: #85bced;
+        background-color: $light-blue-color;
         color: #000;
       }
     }

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useRef } from "react";
 
 import SearchCategoryContext from "@/store/SearchCategoryContext";
 import SearchIcon from "./SearchComponents/Search-Icon-Component/SearchIcon.components";
@@ -22,17 +22,9 @@ const SearchSetion = () => {
     e.stopPropagation();
   };
 
-  // const searchBehavior = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   e.target.value = "";
-  //   setIsVisible(false);
-  //   const postsElement = document.getElementById("posts")!;
-  //   postsElement.scrollIntoView({ behavior: "smooth" });
-  // };
-
   const categoryKeyHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setSearchCategory(e.currentTarget.value);
-      // searchBehavior(e as unknown as React.ChangeEvent<HTMLInputElement>);
     }
   };
 
@@ -41,7 +33,6 @@ const SearchSetion = () => {
       const searchValue = searchCategoryInput.current.value;
 
       setSearchCategory(searchValue);
-      // searchBehavior(e);
     }
   };
 

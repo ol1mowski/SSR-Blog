@@ -6,7 +6,7 @@
   margin-top: 5rem;
   padding: 5rem 0;
   background-color: #1e2433;
-  color: $white-color;
+  color: $white-description-color;
   font-family: "Times New Roman", Times, serif;
   gap: 5rem;
   @media screen and (min-width: $small-desktop) {
@@ -14,46 +14,6 @@
   }
   @media screen and (min-width: $desktop) {
     gap: 15rem;
-  }
-  &__newsletterWrapper {
-    @include d-flex;
-    &__container {
-      @include d-flex-column;
-      padding: 1.5rem;
-      border: 2px solid $light-blue-color;
-      border-radius: 0.5rem;
-      @media screen and (min-width: $mobile) {
-        padding: 2.5rem;
-      }
-      &__content {
-        @include d-flex-column;
-        align-items: flex-start;
-        width: 100%;
-        gap: 0.5rem;
-        &__title {
-          color: #dedede;
-        }
-        &__description {
-          color: #dedede;
-        }
-      }
-      &__form {
-        margin-top: 1rem;
-        @include d-flex;
-        gap: 1rem;
-        &__input {
-          border: 1px solid $light-blue-color;
-          border-radius: 0.3rem;
-          padding: 0.7rem 0.5rem;
-        }
-        &__btn {
-          border-radius: 0.3rem;
-          padding: 0.7rem 0.5rem;
-          background-color: $light-blue-color;
-          border: none;
-        }
-      }
-    }
   }
   &__footerContent {
     @include d-flex-column;
@@ -73,28 +33,6 @@
         font-weight: 400;
         font-style: normal;
         font-size: 1.5rem;
-      }
-    }
-    &__socialWrapper {
-      @include d-flex-column;
-      gap: 4rem;
-      &__social {
-        @include d-flex;
-        gap: 0.5rem;
-        &__icon {
-          cursor: pointer;
-          transition: scale, .7s;
-          will-change: scale;
-        }
-        &__icon:hover {
-          scale: 1.1;
-        }
-      }
-      &__privacy {
-        @include d-flex;
-        &__content {
-          font-size: 1.2rem;
-        }
       }
     }
   }

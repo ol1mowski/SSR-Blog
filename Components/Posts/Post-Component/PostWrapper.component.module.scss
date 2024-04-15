@@ -1,0 +1,28 @@
+@import "@/sass/settings.scss";
+
+.postWrapper {
+  @include d-flex;
+  background-color: $light-dark-color;
+  width: 90vw;
+  height: 10rem;
+  gap: 1rem;
+  align-items: flex-start;
+  border-radius: $border-med;
+  transition: scale 0.7s;
+  will-change: scale;
+  @media screen and (min-width: $mobile) {
+    width: 31rem;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 1rem;
+    width: 33rem;
+  }
+  @media screen and (min-width: $large-desktop) {
+    height: 13rem;
+    width: 44rem;
+  }
+}
+.postWrapper:hover {
+  box-shadow: $box-shadow;
+  scale: $hover-min-scale;
+}

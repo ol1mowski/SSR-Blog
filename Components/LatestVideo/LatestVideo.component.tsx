@@ -1,23 +1,23 @@
-"use client";
-
 import Image from "next/image";
 import s from "./LatestVideo.component.module.scss";
-
 import img from "@/assets/lastVideo.png";
+import ContentWrapper from "./Content-Wrapper/Content-Wrapper.component";
 
 const LatestVideo = () => {
+
   return (
     <section className={s.lastVideoContainer}>
-      <section className={s.lastVideoContainer__content}>
+      <ContentWrapper>
         <div className={s.lastVideoContainer__content__title}>
           <h1 className={s.lastVideoContainer__content__title__h1}>
-            Zabacz mój ostatni odcinek
+            Zobacz mój ostatni odcinek
           </h1>
         </div>
         <div className={s.lastVideoContainer__content__description}>
           <p className={s.lastVideoContainer__content__description__p}>
-            Znajdziesz tu konkrety o pracy w branży it, Najnowocześniejsze
-            rozwiązania w branży, oraz praktyczne porady i wiele więcej
+            Znajdziesz tu konkretne informacje o pracy w branży IT,
+            najnowocześniejsze rozwiązania w branży, praktyczne porady i wiele
+            więcej.
           </p>
         </div>
         <div className={s.lastVideoContainer__content__buttonWrapper}>
@@ -33,7 +33,8 @@ const LatestVideo = () => {
             </button>
           </a>
         </div>
-      </section>
+      </ContentWrapper>
+
       <section className={s.lastVideoContainer__image}>
         <div className={s.lastVideoContainer__image__imageWrapper}>
           <Image

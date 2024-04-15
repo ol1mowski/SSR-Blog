@@ -1,0 +1,17 @@
+@import "@/sass/settings.scss";
+
+.socialWrapper {
+  @include d-flex-column;
+  gap: 4rem;
+  &__privacy {
+    @include d-flex;
+    &__content {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.social {
+  @include d-flex;
+  gap: 0.5rem;
+}

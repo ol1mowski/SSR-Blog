@@ -1,0 +1,10 @@
+@import "@/sass/settings.scss";
+
+.icon {
+  cursor: pointer;
+  transition: scale, 0.7s;
+  will-change: scale;
+}
+.icon:hover {
+  scale: $hover-max-scale;
+}

@@ -1,0 +1,22 @@
+@import "@/sass/settings.scss";
+
+.h1 {
+  font-weight: 900;
+  font-size: 4.5rem;
+  color: $white-color;
+  @media screen and (min-width: $mobile) {
+    font-size: 6rem;
+    width: 30rem;
+  }
+  @media screen and (min-width: $big-tablets) {
+    font-size: 5rem;
+    width: 20rem;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 6rem;
+    width: 30rem;
+  }
+  @media screen and (min-width: $large-desktop) {
+    font-size: 7rem;
+  }
+}

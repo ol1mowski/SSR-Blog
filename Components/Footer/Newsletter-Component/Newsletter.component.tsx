@@ -2,30 +2,30 @@ import s from './Newsletter.component.module.scss';
 
 function Newsletter() {
   return (
-    <section className={s.footerContainer__newsletterWrapper}>
-      <div className={s.footerContainer__newsletterWrapper__container}>
+    <section className={s.newsletterWrapper}>
+      <div className={s.newsletterWrapper__container}>
         <div
-          className={s.footerContainer__newsletterWrapper__container__content}
+          className={s.newsletterWrapper__container__content}
         >
           <h2
             className={
-              s.footerContainer__newsletterWrapper__container__content__title
+              s.newsletterWrapper__container__content__title
             }
           >
             Newsletter
           </h2>
           <p
             className={
-              s.footerContainer__newsletterWrapper__container__content__description
+              s.newsletterWrapper__container__content__description
             }
           >
             Zapisz się do naszego newsletter
           </p>
         </div>
-        <div className={s.footerContainer__newsletterWrapper__container__form}>
+        <div className={s.newsletterWrapper__container__form}>
           <input
             className={
-              s.footerContainer__newsletterWrapper__container__form__input
+              s.newsletterWrapper__container__form__input
             }
             placeholder="Podaj swój email"
             type="text"
@@ -33,7 +33,7 @@ function Newsletter() {
           />
           <button
             className={
-              s.footerContainer__newsletterWrapper__container__form__btn
+              s.newsletterWrapper__container__form__btn
             }
           >
             Dołącz

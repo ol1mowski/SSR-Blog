@@ -10,3 +10,8 @@
     }
   }
 }
+
+.social {
+  @include d-flex;
+  gap: 0.5rem;
+}

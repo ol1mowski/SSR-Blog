@@ -1,0 +1,15 @@
+@import "@/sass/settings.scss";
+
+
+.wrapper {
+  cursor: pointer;
+  @include d-flex-column;
+  border: 1px solid $light-blue-color;
+  padding: $standard-padding;
+  gap: 1rem;
+  border-radius: $border-med;
+  transition: background-color, scale, 0.7s;
+  @media screen and (min-width: $tablet) {
+    padding: $big-padding;
+  }
+}

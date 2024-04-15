@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 import s from "./Category-Component.component.module.scss";
+import CategoryWrapper from "../Category-Wrapper/Category-Wrapper.component";
 
 type CategoryComponentProps = {
   header: string;
@@ -14,7 +15,7 @@ function CategoryComponent({
   img,
 }: CategoryComponentProps) {
   return (
-    <div className={s.wrapper}>
+    <CategoryWrapper>
       <div className={s.wrapper__header}>
         <Image
           className={s.wrapper__header__img}
@@ -23,17 +24,15 @@ function CategoryComponent({
           height={200}
           alt="category image"
         />
-        <h3 className={s.wrapper__header__title}>{ header }</h3>
+        <h3 className={s.wrapper__header__title}>{header}</h3>
       </div>
       <div className={s.wrapper__description}>
-        <p className={s.wrapper__description__p}>
-          { description }
-        </p>
+        <p className={s.wrapper__description__p}>{description}</p>
       </div>
       <div className={s.wrapper__buttonWrapper}>
         <button className={s.wrapper__buttonWrapper__btn}>Zobacz</button>
       </div>
-    </div>
+    </CategoryWrapper>
   );
 }
 

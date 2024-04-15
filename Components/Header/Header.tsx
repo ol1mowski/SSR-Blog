@@ -1,7 +1,4 @@
-import Link from "next/link";
 import s from "./Header.module.scss";
-import Image from "next/image";
-import img from "@/assets/logo.png";
 import HamburgerLogo from "./HamburgerLogo/HamburgerLogo.component";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useContext } from "react";

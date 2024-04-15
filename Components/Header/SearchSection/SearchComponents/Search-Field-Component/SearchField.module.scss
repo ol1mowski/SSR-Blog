@@ -10,15 +10,15 @@
   z-index: 1;
   @include d-flex;
   &__searchPlace {
-    border-radius: 0.5rem;
+    border-radius: $border-med;
     @include d-flex;
     position: absolute;
     top: 0.7rem;
-    border: 2px solid #85bced;
+    border: 2px solid $light-blue-color;
     &__btn {
       @include btn;
       border-radius: 0 0.7rem 0.7rem 0;
-      padding: 0.93rem 1rem;
+      padding: 0.93rem $standard-padding;
       cursor: pointer;
       background-color: $dark-color;
     }
@@ -28,7 +28,7 @@
       background-color: $dark-color;
       border: none;
       padding: 1.1rem 7rem;
-      color: $white-color;
+      color: $white-description-color;
     }
   }
 }

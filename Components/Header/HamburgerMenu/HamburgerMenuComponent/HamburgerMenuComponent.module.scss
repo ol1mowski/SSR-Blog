@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   transform: translateX(-100vw);
-  padding: 2rem;
+  padding: $big-padding;
   overflow-y: scroll;
   animation: showMenu 1s linear forwards;
   &__close {
@@ -26,7 +26,7 @@
       &__btn {
         @include btn;
         border-radius: 0 0.7rem 0.7rem 0;
-        padding: 0.93rem 1rem;
+        padding: 0.93rem $standard-padding;
         cursor: pointer;
         background-color: $dark-color;
       }
@@ -35,8 +35,8 @@
         border-radius: 0.7rem 0 0 0.7rem;
         background-color: $dark-color;
         border: none;
-        padding: 1.1rem 1rem;
-        color: $white-color;
+        padding: 1.1rem $standard-padding;
+        color: $white-description-color;
       }
     }
     &__items {

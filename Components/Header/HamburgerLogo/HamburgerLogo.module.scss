@@ -2,7 +2,7 @@
 
 .hamburgerSection {
   cursor: pointer;
-  padding-top: 0.5rem;
+  padding-top: $small-padding;
 
   @media screen and (min-width: $tablet) {
     margin-right: 2rem;

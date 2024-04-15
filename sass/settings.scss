@@ -1,6 +1,10 @@
 //import font
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&family=Kanit:wght@300&display=swap");
 
+//background gradient
+
+$background-gradient: linear-gradient(90deg, #85bced, #83e6e6, #48e77e);
+
 //text colors
 
 $light-blue-color: #85bced;
@@ -28,6 +32,18 @@ $nav-color: #fff;
 $box-shadow: #e0e1e322 0px 5px 15px;
 
 $box-shadow-category: 1px 1px 1px 1px $blue-color;
+
+//padding
+
+$small-padding: .5rem;
+$standard-padding: 1rem;
+$big-padding: 2rem;
+
+//border size
+
+$border-min: .3rem;
+$border-med: .5rem;
+$border-max: 1rem;
 
 //mixins
 

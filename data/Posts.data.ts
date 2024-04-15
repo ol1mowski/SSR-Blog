@@ -1,4 +1,5 @@
 import img from "@/assets/react.webp";
+import clock from "@/assets/clock.png";
 
 export const MAIN_POST = [
   {
@@ -22,6 +23,8 @@ export const OTHER_POST = [
     data: "04-04-2024",
     img: img,
     category: "React",
+    time: 5,
+    clock: clock,
   },
   {
     id: 2,
@@ -32,6 +35,8 @@ export const OTHER_POST = [
     data: "04-04-2024",
     img: img,
     category: "React",
+    time: 5,
+    clock: clock,
   },
   {
     id: 3,
@@ -42,5 +47,7 @@ export const OTHER_POST = [
     data: "04-04-2024",
     img: img,
     category: "React",
+    time: 5,
+    clock: clock,
   },
 ];

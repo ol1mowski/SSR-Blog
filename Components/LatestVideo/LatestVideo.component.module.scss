@@ -19,8 +19,16 @@
       &__img {
         cursor: pointer;
         border-radius: $border-med;
+        @media screen and (min-width: $mobile) {
+          width: 25rem;
+          height: 20rem;
+        }
+        @media screen and (min-width: $big-tablets) {
+          width: 35rem;
+          height: 25rem;
+        }
         @media screen and (min-width: $small-desktop) {
-          width: 30rem;
+          width: 32rem;
           height: 25rem;
         }
         @media screen and (min-width: $large-desktop) {
@@ -38,7 +46,7 @@
     @include d-flex-column;
     height: 50%;
     gap: 2rem;
-    padding: 1rem;
+    padding: $standard-padding;
     @media screen and (min-width: $mobile) {
       padding-left: 3rem;
     }

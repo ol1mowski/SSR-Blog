@@ -1,0 +1,14 @@
+@import "@/sass/settings.scss";
+
+.social {
+  @include d-flex;
+  gap: 0.5rem;
+  &__icon {
+    cursor: pointer;
+    transition: scale, 0.7s;
+    will-change: scale;
+  }
+  &__icon:hover {
+    scale: $hover-max-scale;
+  }
+}

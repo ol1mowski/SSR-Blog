@@ -1,0 +1,42 @@
+@import "@/sass/settings.scss";
+
+.newsletterWrapper {
+  @include d-flex;
+  &__container {
+    @include d-flex-column;
+    padding: 1.5rem;
+    border: 2px solid $light-blue-color;
+    border-radius: $border-med;
+    @media screen and (min-width: $mobile) {
+      padding: 2.5rem;
+    }
+    &__content {
+      @include d-flex-column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 0.5rem;
+      &__title {
+        color: $white-description-color;
+      }
+      &__description {
+        color: $white-description-color;
+      }
+    }
+    &__form {
+      margin-top: 1rem;
+      @include d-flex;
+      gap: 1rem;
+      &__input {
+        border: 1px solid $light-blue-color;
+        border-radius: $border-min;
+        padding: 0.7rem 0.5rem;
+      }
+      &__btn {
+        border-radius: 0.3rem;
+        padding: 0.7rem 0.5rem;
+        background-color: $light-blue-color;
+        border: none;
+      }
+    }
+  }
+}

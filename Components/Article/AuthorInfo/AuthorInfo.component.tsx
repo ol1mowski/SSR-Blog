@@ -11,7 +11,7 @@ function AuthorInfo() {
   return (
     <section className={s.container}>
       <div className={s.container__authorImageWrapper}>
-        <Image className={s.container__authorImageWrapper__img} src={author} alt="Author-image" />
+        <Image className={s.container__authorImageWrapper__img} width={190} height={170} src={author} alt="Author-image" />
       </div>
       <div className={s.container__authorInfoWrapper}>
         <h3 className={s.container__authorInfoWrapper__name}>Oliwier Markiewicz</h3>

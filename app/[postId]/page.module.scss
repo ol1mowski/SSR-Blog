@@ -8,6 +8,9 @@
     @include d-flex-column;
   }
   &__authorInfo {
-    @include d-flex-column;
+    display: none;
+    @media screen and (min-width: $small-desktop) {
+      @include d-flex-column;
+    }
   }
 }

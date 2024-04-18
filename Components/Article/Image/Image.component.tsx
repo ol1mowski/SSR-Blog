@@ -10,7 +10,7 @@ function ImageComponent({ image }: ImageProps) {
   return (
     <section className={s.container}>
       <div>
-        <Image src={image} alt="main post image" />
+        <Image src={image} width={100} height={100} alt="main post image" />
       </div>
     </section>
   );

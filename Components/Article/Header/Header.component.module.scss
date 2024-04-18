@@ -1,5 +1,17 @@
 @import "@/sass/settings.scss";
 
 .header {
-    color: $white-description-color;
+  color: $white-description-color;
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 1rem;
+  @media screen and (min-width: $mobile) {
+    font-size: 3rem;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 4rem;
+  }
+  @media screen and (min-width: $large-desktop) {
+    font-size: 5rem;
+  }
 }

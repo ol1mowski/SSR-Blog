@@ -1,7 +1,13 @@
 @import "@/sass/settings.scss";
 
 .container {
-    padding-top: 6rem;
+  padding-top: 6rem;
+  @include d-flex;
+  gap: 3rem;
+  &__postWrapper {
     @include d-flex-column;
-    gap: 3rem;
+  }
+  &__authorInfo {
+    @include d-flex-column;
+  }
 }

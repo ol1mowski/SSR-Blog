@@ -1,0 +1,6 @@
+@import "@/sass/settings.scss";
+
+.container {
+    padding-top: 6rem;
+    @include d-flex;
+}

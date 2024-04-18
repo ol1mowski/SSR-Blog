@@ -2,5 +2,6 @@
 
 .container {
     padding-top: 6rem;
-    @include d-flex;
+    @include d-flex-column;
+    gap: 3rem;
 }

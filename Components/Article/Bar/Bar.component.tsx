@@ -21,7 +21,7 @@ function Bar({ readTime }: BarProps) {
             height={20}
             className={s.container__infoWrapper__readTime__img}
             src={clock}
-            alt=""
+            alt="clock-icon"
           />
           <span className={s.container__infoWrapper__readTime__content}>
             {readTime} min

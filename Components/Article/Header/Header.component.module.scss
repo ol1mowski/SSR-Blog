@@ -8,8 +8,15 @@
   @media screen and (min-width: $mobile) {
     font-size: 3rem;
   }
+  @media screen and (min-width: $tablet) {
+    width: 80%;
+  }
+  @media screen and (min-width: $small-desktop) {
+    width: 90%;
+  }
   @media screen and (min-width: $desktop) {
     font-size: 4rem;
+    width: 50rem;
   }
   @media screen and (min-width: $large-desktop) {
     font-size: 5rem;

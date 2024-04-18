@@ -1,2 +1,53 @@
 @import "@/sass/settings.scss";
 
+.container {
+  @include d-flex;
+  color: $white-description-color;
+  justify-content: space-around;
+  padding: $standard-padding;
+  width: 90%;
+  border-radius: $border-max;
+  box-shadow: $box-shadow;
+  background-color: #1e2433;
+  @media screen and (min-width: $tablet) {
+    width: 40rem;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 50rem;
+  }
+  &__categoryWrapper {
+    @include d-flex;
+    gap: 1rem;
+    &__category {
+      border-radius: $border-med;
+      padding: $small-padding $standard-padding;
+      background-color: $light-blue-color;
+      color: $dark-color;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: scale, background-color, color, border, 0.7s;
+      will-change: scale, background-color, color, border;
+    }
+    &__category:hover {
+      scale: $hover-min-scale;
+      background-color: transparent;
+      color: $white-description-color;
+      border: 2px solid $light-blue-color;
+    }
+  }
+  &__infoWrapper {
+    @include d-flex;
+    gap: 2rem;
+    font-size: 1rem;
+    &__date {
+      font-size: 1.1rem;
+    }
+    &__content {
+      font-size: 1.1rem;
+    }
+    &__readTime {
+      @include d-flex;
+      gap: 0.5rem;
+    }
+  }
+}

@@ -6,6 +6,7 @@
   gap: 3rem;
   &__postWrapper {
     @include d-flex-column;
+    gap: 2rem;
   }
   &__authorInfo {
     display: none;

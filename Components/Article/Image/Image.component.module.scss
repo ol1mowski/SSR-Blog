@@ -1,2 +1,18 @@
 @import "@/sass/settings.scss";
 
+.container {
+  @include d-flex;
+  &__imageWrapper {
+    margin-top: 3rem;
+    @include d-flex;
+
+    &__img {
+      border-radius: $border-max;
+      width: 100%;
+      @media screen and (min-width: $desktop) {
+        width: 50rem;
+        height: 25rem;
+      }
+    }
+  }
+}

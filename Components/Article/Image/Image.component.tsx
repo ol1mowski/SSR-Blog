@@ -1,7 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import s from "./Image.component.module.scss";
 
-
 type ImageProps = {
   image: StaticImageData;
 };
@@ -9,8 +8,14 @@ type ImageProps = {
 function ImageComponent({ image }: ImageProps) {
   return (
     <section className={s.container}>
-      <div>
-        <Image src={image} width={100} height={100} alt="main post image" />
+      <div className={s.container__imageWrapper}>
+        <Image
+          className={s.container__imageWrapper__img}
+          src={image}
+          width={310}
+          height={300}
+          alt="main post image"
+        />
       </div>
     </section>
   );

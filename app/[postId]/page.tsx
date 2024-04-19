@@ -7,6 +7,7 @@ import img from "@/assets/react.webp";
 import ImageComponent from "@/Components/Article/First-Page/Image/Image.component";
 import AuthorInfo from "@/Components/Article/First-Page/AuthorInfo/AuthorInfo.component";
 import PostContent from "@/Components/Article/Second-Page/Post-Content/Post-Content.component";
+import TableOfContents from "@/Components/Article/Second-Page/Table-Of-Contents /Table-Of-Contents.component";
 
 function page({ params }: { params: { postId: string } }) {
   return (
@@ -23,7 +24,12 @@ function page({ params }: { params: { postId: string } }) {
       </section>
 
       <section className={s.container__blogSection}>
-        <PostContent />
+        <section className={s.container__blogSection__content}>
+          <PostContent />
+        </section>
+        <section className={s.container__blogSection__tableOfContents}>
+          <TableOfContents />
+        </section>
       </section>
     </main>
   );

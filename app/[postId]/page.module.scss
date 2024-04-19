@@ -24,5 +24,15 @@
   }
   &__blogSection {
     @include d-flex;
+    &__tableOfContents {
+      display: none;
+      @media screen and (min-width: $desktop) {
+        @include d-flex-column;
+        background-color: #1e2433;
+        padding: $standard-padding;
+        border-radius: $border-max;
+        box-shadow: $box-shadow;
+      }
+    }
   }
 }

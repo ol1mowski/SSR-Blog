@@ -6,6 +6,9 @@
   color: $white-description-color;
   width: 90vw;
   gap: 2rem;
+  @media screen and (min-width: $desktop) {
+    width: 60vw;
+  }
   &__header {
     background-color: #1e2433;
     padding: $standard-padding 2rem;

@@ -2,20 +2,27 @@
 
 .container {
   padding-top: 6rem;
-  @include d-flex;
-  gap: 10rem;
-  &__postWrapper {
-    @include d-flex-column;
-    gap: 2rem;
-  }
-  &__authorInfo {
-    display: none;
-    @media screen and (min-width: $desktop) {
+  @include d-flex-column;
+  gap: 4rem;
+  &__firstSection {
+    @include d-flex;
+    gap: 10rem;
+    &__postWrapper {
       @include d-flex-column;
-      background-color: #1e2433;
-      padding: $standard-padding;
-      border-radius: $border-max;
-      box-shadow: $box-shadow;
+      gap: 2rem;
     }
+    &__authorInfo {
+      display: none;
+      @media screen and (min-width: $desktop) {
+        @include d-flex-column;
+        background-color: #1e2433;
+        padding: $standard-padding;
+        border-radius: $border-max;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+  &__blogSection {
+    @include d-flex;
   }
 }

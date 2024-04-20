@@ -10,7 +10,7 @@ function TableOfContents() {
         </h3>
         <ul className={s.container__tableOfContentsWrapper__listWrapper}>
           <li
-            className={s.container__tableOfContentsWrapper__listWrapper__list}
+            className={`${s.container__tableOfContentsWrapper__listWrapper__list} ${s.container__tableOfContentsWrapper__listWrapper__list_active}`}
           >
             <Image src={""} alt="" />
             <span>Co to jest React ?</span>

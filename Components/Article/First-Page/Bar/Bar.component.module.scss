@@ -27,6 +27,10 @@
       cursor: pointer;
       transition: scale, background-color, color, border, 0.7s;
       will-change: scale, background-color, color, border;
+      @media screen and (min-width: $tablet) {
+        padding: $small-padding 2rem;
+        font-size: 1.3rem;
+      }
     }
     &__category:hover {
       scale: $hover-min-scale;

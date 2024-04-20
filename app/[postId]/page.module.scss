@@ -6,7 +6,10 @@
   gap: 4rem;
   &__firstSection {
     @include d-flex;
-    gap: 10rem;
+    gap: 5rem;
+      @media screen and (min-width: $large-desktop) {
+        gap: 10rem;
+      }
     &__postWrapper {
       @include d-flex-column;
       gap: 2rem;

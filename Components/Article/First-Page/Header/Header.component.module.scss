@@ -1,10 +1,11 @@
 @import "@/sass/settings.scss";
 
 .header {
+  @include d-flex;
   color: $white-description-color;
   font-weight: 900;
   font-size: 2rem;
-  padding: 1rem;
+  padding: 2rem;
   @media screen and (min-width: $mobile) {
     font-size: 3rem;
   }

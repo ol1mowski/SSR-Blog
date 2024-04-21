@@ -1,11 +1,5 @@
 @import "@/sass/settings.scss";
 
-// .sticky {
-//   position: sticky;
-//   top: 0;
-//   @include d-flex-column;
-//   padding: $standard-padding 2rem;
-// }
 
 .container {
   @include d-flex-column;
@@ -27,6 +21,11 @@
         cursor: pointer;
         color: $white-description-color;
         margin-bottom: 1rem;
+        transition: scale .7s;
+        will-change: scale;
+      }
+      &__list:hover {
+        scale: 1.05;
       }
       &__list_active {
         color: $light-blue-color;

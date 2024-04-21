@@ -1,3 +1,5 @@
+'use client';
+
 import Header from "@/Components/Article/First-Page/Header/Header.component";
 
 import s from "./page.module.scss";
@@ -8,8 +10,27 @@ import ImageComponent from "@/Components/Article/First-Page/Image/Image.componen
 import AuthorInfo from "@/Components/Article/First-Page/AuthorInfo/AuthorInfo.component";
 import PostContent from "@/Components/Article/Second-Page/Post-Content/Post-Content.component";
 import TableOfContents from "@/Components/Article/Second-Page/Table-Of-Contents /Table-Of-Contents.component";
+import { useEffect, useRef, useState } from "react";
 
 function page({ params }: { params: { postId: string } }) {
+  const header = useRef<HTMLDivElement>(null);
+  const [isSticky, setIsSticky] = useState(false);
+  const handleScroll = () => {
+    if (header.current) {
+      if (scrollY > 800) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    addEventListener("scroll", handleScroll);
+    return () => {
+      removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <main className={s.container}>
       <section className={s.container__firstSection}>
@@ -26,8 +47,20 @@ function page({ params }: { params: { postId: string } }) {
       <section className={s.container__blogSection}>
         <section className={s.container__blogSection__content}>
           <PostContent />
+          <PostContent />
+          <PostContent />
+          <PostContent />
+          <PostContent />
+          <PostContent />
         </section>
-        <section className={s.container__blogSection__tableOfContents}>
+        <section
+          ref={header}
+          className={` ${
+            isSticky
+              ? s.container__blogSection__tableOfContents_sticky
+              : s.container__blogSection__tableOfContents
+          }`}
+        >
           <TableOfContents />
         </section>
       </section>

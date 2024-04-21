@@ -7,9 +7,9 @@
   &__firstSection {
     @include d-flex;
     gap: 5rem;
-      @media screen and (min-width: $large-desktop) {
-        gap: 10rem;
-      }
+    @media screen and (min-width: $large-desktop) {
+      gap: 10rem;
+    }
     &__postWrapper {
       @include d-flex-column;
       gap: 2rem;
@@ -27,9 +27,22 @@
   }
   &__blogSection {
     @include d-flex;
+    align-items: flex-start;
     &__tableOfContents {
       display: none;
       @media screen and (min-width: $desktop) {
+        @include d-flex-column;
+        background-color: #1e2433;
+        padding: $standard-padding;
+        border-radius: $border-max;
+        box-shadow: $box-shadow;
+      }
+    }
+    &__tableOfContents_sticky {
+      display: none;
+      @media screen and (min-width: $desktop) {
+        position: sticky;
+        top: 0;
         @include d-flex-column;
         background-color: #1e2433;
         padding: $standard-padding;

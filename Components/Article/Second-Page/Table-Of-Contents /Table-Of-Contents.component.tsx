@@ -1,4 +1,3 @@
-import Image from "next/image";
 import s from "./Table-Of-Contents.component.module.scss";
 
 function TableOfContents() {
@@ -10,28 +9,24 @@ function TableOfContents() {
         </h3>
         <ul className={s.container__tableOfContentsWrapper__listWrapper}>
           <li
-            className={`${s.container__tableOfContentsWrapper__listWrapper__list} ${s.container__tableOfContentsWrapper__listWrapper__list_active}`}
+            className={s.container__tableOfContentsWrapper__listWrapper__list}
           >
-            <Image src={""} alt="" />
             <span>Co to jest React ?</span>
           </li>{" "}
           <li
             className={s.container__tableOfContentsWrapper__listWrapper__list}
           >
-            <Image src={""} alt="" />
-            <span>Co to jest React ?</span>
+            <span>Jak używać Hooks?</span>
           </li>{" "}
           <li
             className={s.container__tableOfContentsWrapper__listWrapper__list}
           >
-            <Image src={""} alt="" />
-            <span>Co to jest React ?</span>
+            <span>Zarządzanie stanem</span>
           </li>{" "}
           <li
             className={s.container__tableOfContentsWrapper__listWrapper__list}
           >
-            <Image src={""} alt="" />
-            <span>Co to jest React ?</span>
+            <span>Advanced Patterns</span>
           </li>{" "}
         </ul>
       </div>

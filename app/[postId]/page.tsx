@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Header from "@/Components/Article/First-Page/Header/Header.component";
 
@@ -11,6 +11,7 @@ import AuthorInfo from "@/Components/Article/First-Page/AuthorInfo/AuthorInfo.co
 import PostContent from "@/Components/Article/Second-Page/Post-Content/Post-Content.component";
 import TableOfContents from "@/Components/Article/Second-Page/Table-Of-Contents /Table-Of-Contents.component";
 import { useEffect, useRef, useState } from "react";
+import { POSTS_CONTENT } from "@/data/Posts.data";
 
 function page({ params }: { params: { postId: string } }) {
   const header = useRef<HTMLDivElement>(null);
@@ -46,12 +47,13 @@ function page({ params }: { params: { postId: string } }) {
 
       <section className={s.container__blogSection}>
         <section className={s.container__blogSection__content}>
-          <PostContent />
-          <PostContent />
-          <PostContent />
-          <PostContent />
-          <PostContent />
-          <PostContent />
+          {POSTS_CONTENT.map((p) => (
+            <PostContent
+              key={p.id}
+              title={p.title}
+              description={p.description}
+            />
+          ))}
         </section>
         <section
           ref={header}

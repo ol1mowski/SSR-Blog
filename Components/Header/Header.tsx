@@ -4,6 +4,7 @@ import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import { useContext } from "react";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
 import SearchSetion from "./SearchSection/SearchSetion";
+import Link from "next/link";
 
 const Header = () => {
   const { isClick } = useContext(HamburgerClickContext);
@@ -13,13 +14,17 @@ const Header = () => {
       <header className={s.header}>
         <section className={s.header__logoSection}>
           <h2 className={s.header__logoSection__logo}>
-            IT<span className={s.header__logoSection__logo__span}>:</span>BLOG
+            <Link href={"/"}>
+              IT<span className={s.header__logoSection__logo__span}>:</span>BLOG
+            </Link>
           </h2>
         </section>
         <section className={s.header__navMenu}>
           <div className={s.header__navMenu__nav}>
             <ul className={s.header__navMenu__items}>
-              <li className={s.header__navMenu__items__item}>Home</li>
+              <Link href={"/"}>
+                <li className={s.header__navMenu__items__item}>Home</li>
+              </Link>
               <li>
                 {" "}
                 <a

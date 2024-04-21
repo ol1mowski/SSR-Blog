@@ -19,10 +19,15 @@
       background: $background-gradient;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      transition: scale .7s;
+      will-change: scale;
       &__span {
         color: $white-description-color;
         -webkit-text-fill-color: $white-description-color;
       }
+    }
+    &__logo:hover {
+      scale: $hover-max-scale;
     }
   }
 

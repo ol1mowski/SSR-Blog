@@ -20,6 +20,7 @@ function PostContent({ title, description }: PostContentProps) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setSectionVisible(title, true);
+              console.log(title);
             }
           });
         },

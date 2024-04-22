@@ -11,7 +11,7 @@ type PostContentProps = {
 function PostContent({ title, description }: PostContentProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  const { setSectionVisible, sectionVisible } = useContext(PostVisibleContext);
+  const { setSectionVisible } = useContext(PostVisibleContext);
 
   useEffect(() => {
     if (ref.current) {
@@ -20,7 +20,6 @@ function PostContent({ title, description }: PostContentProps) {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setSectionVisible(title, true);
-              console.log(title);
             }
           });
         },
@@ -42,10 +41,6 @@ function PostContent({ title, description }: PostContentProps) {
       setSectionVisible(title, false);
     }
   }, []);
-
-  useEffect(() => {
-    console.log(sectionVisible);
-  }, [sectionVisible]);
 
   return (
     <section ref={ref} className={s.container}>

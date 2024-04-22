@@ -1,0 +1,29 @@
+@import "@/sass/settings.scss";
+
+.container {
+  @include d-flex-column;
+  padding: $standard-padding;
+  color: $white-description-color;
+  width: 90vw;
+  gap: 2rem;
+  @media screen and (min-width: $desktop) {
+    width: 60vw;
+  }
+  &__header {
+    background-color: #1e2433;
+    padding: $standard-padding 2rem;
+    border-radius: $border-med;
+    @media screen and (min-width: $tablet) {
+      padding: 2rem;
+    }
+    &__title {
+      font-size: 2rem;
+    }
+    &__content {
+      padding: $standard-padding;
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
+  }
+}

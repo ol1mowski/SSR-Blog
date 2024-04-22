@@ -5,7 +5,9 @@
   gap: 5rem;
   @media screen and (min-width: $desktop) {
     @include d-flex;
-    gap: 10rem;
+  }
+  @media screen and (min-width: $large-desktop) {
+    gap: 7rem;
   }
 }
 
@@ -43,6 +45,6 @@
   }
   &__otherLastPostContainer {
     @include d-flex-column;
-    gap: 2rem;
+    gap: 3rem;
   }
 }

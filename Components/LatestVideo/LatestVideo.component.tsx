@@ -22,7 +22,7 @@ const LatestVideo = () => {
         </div>
         <div className={s.lastVideoContainer__content__buttonWrapper}>
           <a
-            href="https://www.youtube.com/"
+            href="https://www.youtube.com/watch?v=4Bi2oU6n0sU&t=1s"
             target="_blank"
             rel="noopener noreferrer"
           >

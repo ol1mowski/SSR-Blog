@@ -1,0 +1,36 @@
+@import "@/sass/settings.scss";
+
+
+.container {
+  @include d-flex-column;
+  padding: $standard-padding 2rem;
+
+  &__tableOfContentsWrapper {
+    @include d-flex-column;
+    gap: 1.5rem;
+    color: $white-description-color;
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__listWrapper {
+      font-weight: 400;
+      font-size: 1.3rem;
+      list-style-type: none;
+      padding-left: $standard-padding;
+      &__list {
+        cursor: pointer;
+        color: $white-description-color;
+        margin-bottom: 1rem;
+        transition: scale .7s;
+        will-change: scale;
+      }
+      &__list:hover {
+        scale: 1.05;
+      }
+      &__list_active {
+        color: $light-blue-color;
+        font-weight: 500;
+      }
+    }
+  }
+}

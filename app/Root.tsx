@@ -1,4 +1,5 @@
 "use client";
+
 import Header from "@/Components/Header/Header";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
 import SearchCategoryContext from "@/store/SearchCategoryContext";

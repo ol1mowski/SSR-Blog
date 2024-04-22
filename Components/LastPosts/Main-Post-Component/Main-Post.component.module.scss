@@ -8,11 +8,11 @@
   background-color: $light-dark-color;
   border-radius: $border-med;
   width: 90vw;
-  @media screen and (min-width: $mobile) {
-    width: 27rem;
+  @media screen and (min-width: $tablet) {
+    width: 35rem; 
   }
   @media screen and (min-width: $large-desktop) {
-    width: 40rem;
+    width: 45rem;
     padding-bottom: $border-med;
   }
 }

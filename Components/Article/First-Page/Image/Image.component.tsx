@@ -13,7 +13,7 @@ function ImageComponent({ image }: ImageProps) {
           className={s.container__imageWrapper__img}
           src={image}
           width={310}
-          height={300}
+          height={270}
           alt="main post image"
         />
       </div>

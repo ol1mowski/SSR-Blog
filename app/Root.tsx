@@ -2,6 +2,7 @@
 
 import Header from "@/Components/Header/Header";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
+import PostVisibleContext from "@/store/PostVisableContext";
 import SearchCategoryContext from "@/store/SearchCategoryContext";
 import React, { useState } from "react";
 
@@ -14,30 +15,48 @@ function Root({
 
   const [isSearchVisible, setIsSearchVisible] = useState<boolean>(false);
 
+  const [sectionVisible, setSectionVisible] = useState<{
+    sectionName: string;
+    isVisible: boolean;
+  }>({ sectionName: "", isVisible: false });
+
   const [category, setCategory] = useState<string | null>(null);
 
   return (
-    <html lang="en">
+    <html lang="pl-PL">
       <body>
-        <SearchCategoryContext.Provider
+        <PostVisibleContext.Provider
           value={{
-            isVisible: isSearchVisible,
-            setIsVisible: (isVisible: boolean) => setIsSearchVisible(isVisible),
-            searchCategory: category,
-            setSearchCategory: (searchCategory: string) =>
-              setCategory(searchCategory),
+            sectionVisible: sectionVisible,
+            setSectionVisible(sectionName, isVisible) {
+              setSectionVisible({
+                sectionName: sectionName,
+                isVisible: isVisible,
+              });
+            },
           }}
         >
-          <HamburgerClickContext.Provider
+          <SearchCategoryContext.Provider
             value={{
-              isClick: click,
-              setClick: (click: boolean) => setClick(click),
+              isVisible: isSearchVisible,
+              setIsVisible: (isVisible: boolean) =>
+                setIsSearchVisible(isVisible),
+              searchCategory: category,
+              setSearchCategory: (searchCategory: string) =>
+                setCategory(searchCategory),
             }}
           >
-            <Header />
-            {children}
-          </HamburgerClickContext.Provider>
-        </SearchCategoryContext.Provider>
+            <HamburgerClickContext.Provider
+              value={{
+                isClick: click,
+                setClick: (click: boolean) => setClick(click),
+              }}
+            >
+              <Header />
+              {children}
+            </HamburgerClickContext.Provider>
+          </SearchCategoryContext.Provider>
+        </PostVisibleContext.Provider>
       </body>
     </html>
   );

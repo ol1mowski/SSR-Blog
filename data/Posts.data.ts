@@ -67,7 +67,7 @@ export const POSTS_CONTENT = [
   },
   {
     id: 2,
-    title: "Jak używać Hooks?",
+    title: "Jak używać Hooks ?",
     description: `
 React Hooks to specjalne funkcje, które pozwalają na używanie stanu oraz innych funkcji Reacta w komponentach funkcyjnych. Wprowadzone w wersji 16.8, Hooks stanowią alternatywę dla klasycznych komponentów klasowych, umożliwiając zarządzanie stanem, efektami ubocznymi i innymi aspektami Reacta w bardziej wydajny i łatwy sposób. Poniżej przedstawię podstawowe informacje o najważniejszych Hooksach, takich jak useState, useEffect, useContext, oraz jak można ich używać.`,
   },

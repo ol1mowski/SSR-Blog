@@ -1,7 +1,7 @@
 import Image from "next/image";
 import s from "./LatestVideo.component.module.scss";
-import img from "@/assets/lastVideo.png";
 import ContentWrapper from "./Content-Wrapper/Content-Wrapper.component";
+import { LASTVIDEO } from "@/data/LastVideoImage";
 
 const LatestVideo = () => {
 
@@ -41,7 +41,7 @@ const LatestVideo = () => {
             width={300}
             height={250}
             className={s.lastVideoContainer__image__imageWrapper__img}
-            src={img}
+            src={LASTVIDEO}
             alt="My last video miniature image"
           />
         </div>

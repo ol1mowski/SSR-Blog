@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/Components/Footer/Footer.component";
 import Header from "@/Components/Header/Header";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
 import PostVisibleContext from "@/store/PostVisableContext";
@@ -54,6 +55,7 @@ function Root({
             >
               <Header />
               {children}
+              <Footer />
             </HamburgerClickContext.Provider>
           </SearchCategoryContext.Provider>
         </PostVisibleContext.Provider>

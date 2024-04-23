@@ -1,5 +1,6 @@
-import img from "@/assets/react.webp";
-import clock from "@/assets/clock.png";
+import react from "@/assets/react.webp";
+import prog from '@/assets/prog.jpg';
+import edu from '@/assets/edu.jpg';
 
 export const MAIN_POST = [
   {
@@ -9,7 +10,7 @@ export const MAIN_POST = [
       "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
     author: "Oliwier Markiewicz",
     data: "04-04-2024",
-    img: img,
+    img: react,
   },
 ];
 
@@ -21,34 +22,31 @@ export const OTHER_POST = [
       "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
     author: "Oliwier Markiewicz",
     data: "04-04-2024",
-    img: img,
+    img: react,
     category: "React",
     time: 5,
-    clock: clock,
   },
   {
     id: 2,
-    title: "Jak zacząć się uczyć React w 2024 roku ?",
+    title: "Co na początek backend czy frontend ?",
     description:
       "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
     author: "Oliwier Markiewicz",
-    data: "04-04-2024",
-    img: img,
-    category: "React",
-    time: 5,
-    clock: clock,
+    data: "11-04-2024",
+    img: prog,
+    category: "Programowanie ogólne",
+    time: 7,
   },
   {
     id: 3,
-    title: "Jak zacząć się uczyć React w 2024 roku ?",
+    title: "Marka ogólna w brany IT - recenzja ksiązki",
     description:
       "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
     author: "Oliwier Markiewicz",
-    data: "04-04-2024",
-    img: img,
-    category: "React",
+    data: "14-04-2024",
+    img: edu,
+    category: "Materiały edukacyjne",
     time: 5,
-    clock: clock,
   },
 ];
 

@@ -21,7 +21,6 @@ function PostsList() {
             category={p.category}
             time={p.time}
             data={p.data}
-            clock={p.clock}
           />
         ))}
       </section>

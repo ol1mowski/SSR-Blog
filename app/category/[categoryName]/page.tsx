@@ -1,11 +1,12 @@
-import React from 'react'
+import CategorySubpage from "@/Components/CategorySubpage/CategorySubpage.component";
+import s from "./page.module.scss";
 
 function page() {
   return (
-    <h1>
-        Catergory
-    </h1>
-  )
+    <section className={s.container}>
+      <CategorySubpage categoryName={"React"} amountOfArticles={'3 artykuły'}/>
+    </section>
+  );
 }
 
-export default page
+export default page;

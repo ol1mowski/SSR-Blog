@@ -21,7 +21,7 @@ export const CATEGORY_LIST = [
     id: 3,
     header: "Programowanie ogólne",
     description:
-      "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać ",
+      " Ta kategoria jest miejscem, gdzie zgłębiasz szerokie spektrum tematów związanych z programowaniem.",
     img: imgProg,
   },
 ];

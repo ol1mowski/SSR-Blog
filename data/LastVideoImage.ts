@@ -1,3 +1,6 @@
 import videoImge from '@/assets/lastVideo.png';
 
-export const LASTVIDEO = videoImge;
+export const LASTVIDEO = {
+  link: "https://www.youtube.com/watch?v=4Bi2oU6n0sU&t=1s",
+  image: videoImge,
+};

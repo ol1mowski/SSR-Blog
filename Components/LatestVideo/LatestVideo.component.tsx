@@ -5,6 +5,8 @@ import { LASTVIDEO } from "@/data/LastVideoImage";
 
 const LatestVideo = () => {
 
+  const { image, link } = LASTVIDEO
+
   return (
     <section className={s.lastVideoContainer}>
       <ContentWrapper>
@@ -22,7 +24,7 @@ const LatestVideo = () => {
         </div>
         <div className={s.lastVideoContainer__content__buttonWrapper}>
           <a
-            href="https://www.youtube.com/watch?v=4Bi2oU6n0sU&t=1s"
+            href={link}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,7 +43,7 @@ const LatestVideo = () => {
             width={300}
             height={250}
             className={s.lastVideoContainer__image__imageWrapper__img}
-            src={LASTVIDEO}
+            src={image}
             alt="My last video miniature image"
           />
         </div>

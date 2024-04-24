@@ -23,6 +23,7 @@ const Category = () => {
         {CATEGORY_LIST.map((c) => (
           <CategoryComponent
             key={c.id}
+            id={c.id}
             header={c.header}
             description={c.description}
             img={c.img}

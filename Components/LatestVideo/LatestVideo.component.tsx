@@ -1,11 +1,25 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import s from "./LatestVideo.component.module.scss";
 import ContentWrapper from "./Content-Wrapper/Content-Wrapper.component";
-import { LASTVIDEO } from "@/data/LastVideoImage";
+import { fetchElements } from "@/utils/https";
 
-const LatestVideo = () => {
+const LatestVideo = async () => {
+  const fetchItems = await fetchElements("Blog");
 
-  const { image, link } = LASTVIDEO
+  type DataValue = {
+    image: StaticImageData;
+    link: string;
+  };
+
+  const lastVideoItem: DataValue = fetchItems.find(
+    (item) => item.id === "LastVideo"
+  );
+
+  if (!lastVideoItem) {
+    throw new Error("Could not find");
+  }
+
+  const { link, image } = lastVideoItem;
 
   return (
     <section className={s.lastVideoContainer}>
@@ -23,11 +37,7 @@ const LatestVideo = () => {
           </p>
         </div>
         <div className={s.lastVideoContainer__content__buttonWrapper}>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <button
               className={s.lastVideoContainer__content__buttonWrapper__button}
             >

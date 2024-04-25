@@ -2,8 +2,20 @@ import s from "./Category.component.module.scss";
 
 import CategoryComponent from "./Category-component/Category-Component.component";
 import { CATEGORY_LIST } from "@/data/Category.data";
+import { fetchElements } from "@/utils/https";
+import { StaticImageData } from "next/image";
 
-const Category = () => {
+const Category = async () => {
+  const fetchItems = await fetchElements("Blog");
+
+  type DataValue = { id: string, data: [{ id: string, title: string, description: string, image: StaticImageData }] };
+
+  const categoriesItem: DataValue = fetchItems.find((item) => item.id === "categories");
+
+  if (!categoriesItem) {
+    throw new Error("Could not find");
+  }
+
   return (
     <section className={s.categoryContainer}>
       <section className={s.categoryContainer__content}>
@@ -20,13 +32,13 @@ const Category = () => {
         </div>
       </section>
       <section className={s.categoryContainer__categoryList}>
-        {CATEGORY_LIST.map((c) => (
+        {categoriesItem.data.map((c) => (
           <CategoryComponent
             key={c.id}
             id={c.id}
-            header={c.header}
+            header={c.title}
             description={c.description}
-            img={c.img}
+            img={c.image}
           />
         ))}
       </section>

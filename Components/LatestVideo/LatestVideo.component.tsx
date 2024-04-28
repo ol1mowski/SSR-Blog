@@ -3,24 +3,29 @@ import s from "./LatestVideo.component.module.scss";
 import ContentWrapper from "./Content-Wrapper/Content-Wrapper.component";
 import { fetchElements } from "@/utils/https";
 
+import image from '@/assets/images/lastVideo.png';
+
+type DataType = {
+  id: string;
+  link: string;
+};
+
+
 const LatestVideo = async () => {
   const fetchItems = await fetchElements("Blog");
 
-  type DataValue = {
-    image: StaticImageData;
-    link: string;
-  };
-
-  const lastVideoItem: DataValue = fetchItems.find(
+  const lastVideoItem = fetchItems.find(
     (item) => item.id === "LastVideo"
-  );
+  ) as DataType;
+
 
   if (!lastVideoItem) {
-    throw new Error("Could not find");
+    throw new Error("No matching item found.");
   }
 
-  const { link, image } = lastVideoItem;
-
+  const { link } = lastVideoItem;  
+  
+  
   return (
     <section className={s.lastVideoContainer}>
       <ContentWrapper>

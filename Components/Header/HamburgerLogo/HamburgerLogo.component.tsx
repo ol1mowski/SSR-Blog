@@ -5,7 +5,7 @@ import s from "./HamburgerLogo.module.scss";
 import Image from "next/image";
 import { useContext, useRef } from "react";
 
-import hamburger from "@/assets/hamburger.png";
+import hamburger from "@/assets/icons/hamburger.png";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
 
 function HamburgerLogo() {

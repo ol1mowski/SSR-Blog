@@ -1,6 +1,6 @@
-import imgReact from "@/assets/react.webp";
-import imgEdu from "@/assets/edu.jpg";
-import imgProg from "@/assets/prog.jpg";
+import imgReact from "@/assets/images/react.webp";
+import imgEdu from "@/assets/images/edu.jpg";
+import imgProg from "@/assets/images/prog.jpg";
 
 export const CATEGORY_LIST = [
   {

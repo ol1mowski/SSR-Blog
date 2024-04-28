@@ -1,7 +1,7 @@
 import Image from "next/image";
 import s from "./Homepage.component.module.scss";
 
-import img from "@/assets/gif.gif";
+import img from "@/assets/images/gif.gif";
 import Text from "./Text-component/Text.component";
 
 const HomepageComponent = () => {

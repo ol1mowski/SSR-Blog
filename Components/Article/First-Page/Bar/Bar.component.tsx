@@ -1,7 +1,7 @@
 import Image from "next/image";
 import s from "./Bar.component.module.scss";
 
-import clock from "@/assets/clock.png";
+import clock from "@/assets/icons/clock.png";
 import Link from "next/link";
 
 type BarProps = {

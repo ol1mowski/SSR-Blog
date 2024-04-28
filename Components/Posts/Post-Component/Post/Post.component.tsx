@@ -1,6 +1,6 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
-import clock from "@/assets/clock.png";
+import clock from "@/assets/icons/clock.png";
 
 import s from "./Post.component.module.scss";
 
@@ -11,6 +11,7 @@ type PostProps = {
   description: string;
   time: number;
 };
+
 function Post({ category, title, description, data, time,  }: PostProps) {
   return (
     <div className={s.post}>

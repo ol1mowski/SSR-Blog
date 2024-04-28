@@ -1,7 +1,7 @@
 import Image from "next/image";
 import s from "./AuthorInfo.component.module.scss";
 
-import author from '@/assets/icons/author.webp';
+import author from '@/assets/images/author.webp';
 
 import yt from '@/assets/icons/yt.png';
 import linked from '@/assets/icons/linkedin.png';

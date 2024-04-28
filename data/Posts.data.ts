@@ -1,6 +1,6 @@
-import react from "@/assets/icons/react.webp";
+import react from "@/assets/images/react.webp";
 import prog from '@/assets/icons/prog.jpg';
-import book from '@/assets/icons/books.jpeg';
+import book from '@/assets/images/books.jpeg';
 
 export const MAIN_POST = [
   {

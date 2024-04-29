@@ -1,0 +1,7 @@
+@import "@/sass/settings.scss";
+
+.container {
+  padding: $standard-padding;
+  padding-top: 10rem;
+  @include d-flex-column;
+}

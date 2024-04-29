@@ -1,10 +1,31 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import s from "./LatestVideo.component.module.scss";
-import img from "@/assets/lastVideo.png";
 import ContentWrapper from "./Content-Wrapper/Content-Wrapper.component";
+import { fetchElements } from "@/utils/https";
 
-const LatestVideo = () => {
+import image from '@/assets/images/lastVideo.png';
 
+type DataType = {
+  id: string;
+  link: string;
+};
+
+
+const LatestVideo = async () => {
+  const fetchItems = await fetchElements("Blog");
+
+  const lastVideoItem = fetchItems.find(
+    (item) => item.id === "LastVideo"
+  ) as DataType;
+
+
+  if (!lastVideoItem) {
+    throw new Error("No matching item found.");
+  }
+
+  const { link } = lastVideoItem;  
+  
+  
   return (
     <section className={s.lastVideoContainer}>
       <ContentWrapper>
@@ -21,11 +42,7 @@ const LatestVideo = () => {
           </p>
         </div>
         <div className={s.lastVideoContainer__content__buttonWrapper}>
-          <a
-            href="https://www.youtube.com/watch?v=4Bi2oU6n0sU&t=1s"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <button
               className={s.lastVideoContainer__content__buttonWrapper__button}
             >
@@ -41,7 +58,7 @@ const LatestVideo = () => {
             width={300}
             height={250}
             className={s.lastVideoContainer__image__imageWrapper__img}
-            src={img}
+            src={image}
             alt="My last video miniature image"
           />
         </div>

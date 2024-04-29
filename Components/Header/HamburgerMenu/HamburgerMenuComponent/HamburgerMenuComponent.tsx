@@ -1,8 +1,8 @@
 import s from "./HamburgerMenuComponent.module.scss";
 
-import close from "@/assets/close_icon.png";
-import java from "@/assets/java_icon.png";
-import react from "@/assets/react_icon.png";
+import close from "@/assets/icons/close_icon.png";
+import java from "@/assets/icons/java_icon.png";
+import react from "@/assets/icons/react_icon.png";
 import Image from "next/image";
 
 type HamburgerMenuComponentProps = {

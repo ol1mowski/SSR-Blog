@@ -1,9 +1,40 @@
 import s from "./PostList.component.module.scss";
 
 import PostWrapper from "./Post-Component/PostWrapper.component";
-import { OTHER_POST } from "@/data/Posts.data";
+import { fetchElements } from "@/utils/https";
+import { StaticImageData } from "next/image";
 
-function PostsList() {
+type DataType = {
+  id: string;
+  allPosts: Array<{
+    author: string;
+    category: string;
+    date: string;
+    description: string;
+    id: number;
+    time: number;
+    image: StaticImageData;
+    title: string;
+  }>;
+};
+
+async function PostsList() {
+  const fetchItems = await fetchElements("Blog");
+  const allPostsItem = fetchItems.find(
+    (item) => item.id === "posts"
+  ) as DataType;
+
+  if (!allPostsItem) {
+    throw new Error("No matching item found.");
+  }
+
+  const { allPosts } = allPostsItem;
+
+  if (!allPosts) {
+    throw new Error("Some required properties are missing.");
+  }
+
+
   return (
     <section className={s.PostListContainer}>
       <section className={s.PostListContainer__header}>
@@ -12,16 +43,15 @@ function PostsList() {
         </h2>
       </section>
       <section className={s.PostListContainer__content}>
-        {OTHER_POST.map((p) => (
+        {allPosts.map((p) => (
           <PostWrapper
             key={p.id}
-            icon={p.img}
+            icon={p.image}
             title={p.title}
             description={p.description}
             category={p.category}
             time={p.time}
-            data={p.data}
-            clock={p.clock}
+            data={p.date}
           />
         ))}
       </section>

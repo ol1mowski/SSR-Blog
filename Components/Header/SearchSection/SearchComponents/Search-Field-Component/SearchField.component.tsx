@@ -1,7 +1,7 @@
 import Image from "next/image";
 import s from "./SearchField.module.scss";
 
-import img from "@/assets/search.png";
+import img from "@/assets/icons/search.png";
 import { RefObject } from "react";
 
 type SearchFieldProps = {

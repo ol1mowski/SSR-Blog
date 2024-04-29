@@ -10,7 +10,6 @@ import { StaticImageData } from "next/image";
 import s from "./PostWrapper.component.module.scss";
 
 type PostWrapperProps = {
-  clock: StaticImageData;
   icon: StaticImageData;
   category: string;
   title: string;
@@ -21,7 +20,6 @@ type PostWrapperProps = {
 
 function PostWrapper({
   icon,
-  clock,
   category,
   title,
   description,
@@ -52,7 +50,6 @@ function PostWrapper({
     >
       <PostImage icon={icon} />
       <Post
-        clock={clock}
         category={category}
         title={title}
         description={description}

@@ -1,15 +1,16 @@
-import img from "@/assets/react.webp";
-import clock from "@/assets/clock.png";
+import react from "@/assets/images/react.webp";
+import prog from '@/assets/icons/prog.jpg';
+import book from '@/assets/images/books.jpeg';
 
 export const MAIN_POST = [
   {
     id: 1,
     title: "Jak zacząć się uczyć React w 2024 roku ?",
     description:
-      "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
+      "Poznaj najlepsze praktyki, zasoby i strategie na start z Reactem w 2024 roku, aby skutecznie rozpocząć swoją przygodę z jedną z najpopularniejszych bibliotek JavaScript do tworzenia interfejsów użytkownika.",
     author: "Oliwier Markiewicz",
     data: "04-04-2024",
-    img: img,
+    img: react,
   },
 ];
 
@@ -18,37 +19,34 @@ export const OTHER_POST = [
     id: 1,
     title: "Jak zacząć się uczyć React w 2024 roku ?",
     description:
-      "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
+      "Poznaj najlepsze praktyki, zasoby i strategie na start z Reactem w 2024 roku, aby skutecznie rozpocząć swoją przygodę z jedną z najpopularniejszych bibliotek JavaScript do tworzenia interfejsów użytkownika.",
     author: "Oliwier Markiewicz",
     data: "04-04-2024",
-    img: img,
+    img: react,
     category: "React",
     time: 5,
-    clock: clock,
   },
   {
     id: 2,
-    title: "Jak zacząć się uczyć React w 2024 roku ?",
+    title: "Co na początek backend czy frontend ?",
     description:
-      "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
+      "Odkryj, które podejście — backend czy frontend — najlepiej odpowiada Twoim celom i stylowi nauki, oraz poznaj kluczowe aspekty obu ścieżek, aby ułatwić sobie podjęcie decyzji, od czego zacząć swoją przygodę z programowaniem.",
     author: "Oliwier Markiewicz",
-    data: "04-04-2024",
-    img: img,
-    category: "React",
-    time: 5,
-    clock: clock,
+    data: "11-04-2024",
+    img: prog,
+    category: "Programowanie ogólne",
+    time: 7,
   },
   {
     id: 3,
-    title: "Jak zacząć się uczyć React w 2024 roku ?",
+    title: "Marka ogólna w brany IT - recenzja ksiązki",
     description:
-      "Tutaj podzielę się z wami najlepszymi kursami i ksiązkami o tematyce tworzenia stron internetowych. Koniecznie musisz je znać",
+      "Zapoznaj się z recenzją książki 'Marka ogólna w branży IT', która analizuje, jak skutecznie budować i zarządzać marką w dynamicznie rozwijającym się sektorze technologicznym.",
     author: "Oliwier Markiewicz",
-    data: "04-04-2024",
-    img: img,
-    category: "React",
+    data: "14-04-2024",
+    img: book,
+    category: "Materiały edukacyjne",
     time: 5,
-    clock: clock,
   },
 ];
 

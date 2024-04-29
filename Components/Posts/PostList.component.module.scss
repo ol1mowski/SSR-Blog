@@ -42,8 +42,6 @@
     display: grid;
     gap: 5rem;
     cursor: pointer;
-    @media screen and (min-width: $small-desktop) {
-    }
     @media screen and (min-width: $desktop) {
       grid-template-columns: repeat(2, 1fr);
       width: 70rem;

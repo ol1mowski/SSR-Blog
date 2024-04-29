@@ -1,9 +1,36 @@
 import s from "./Category.component.module.scss";
 
 import CategoryComponent from "./Category-component/Category-Component.component";
-import { CATEGORY_LIST } from "@/data/Category.data";
+import { fetchElements } from "@/utils/https";
+import { StaticImageData } from "next/image";
 
-const Category = () => {
+type DataType = {
+  id: string;
+  data: Array<{
+    description: string;
+    id: string;
+    time: number;
+    image: StaticImageData;
+    title: string;
+  }>;
+};
+
+const Category = async () => {
+  const fetchItems = await fetchElements("Blog");
+  const categoriesItem = fetchItems.find(
+    (item) => item.id === "categories"
+  ) as DataType;
+
+  if (!categoriesItem) {
+    throw new Error("No matching item found.");
+  }
+
+  const { data } = categoriesItem;
+
+  if (!data) {
+    throw new Error("Some required properties are missing.");
+  }
+
   return (
     <section className={s.categoryContainer}>
       <section className={s.categoryContainer__content}>
@@ -20,12 +47,13 @@ const Category = () => {
         </div>
       </section>
       <section className={s.categoryContainer__categoryList}>
-        {CATEGORY_LIST.map((c) => (
+        {data.map((c) => (
           <CategoryComponent
             key={c.id}
-            header={c.header}
+            id={c.id}
+            header={c.title}
             description={c.description}
-            img={c.img}
+            img={c.image}
           />
         ))}
       </section>

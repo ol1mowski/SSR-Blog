@@ -4,7 +4,7 @@ import Header from "@/Components/Article/First-Page/Header/Header.component";
 
 import s from "./page.module.scss";
 import Bar from "@/Components/Article/First-Page/Bar/Bar.component";
-import img from "@/assets/react.webp";
+import img from "@/assets/images/react.webp";
 
 import ImageComponent from "@/Components/Article/First-Page/Image/Image.component";
 import AuthorInfo from "@/Components/Article/First-Page/AuthorInfo/AuthorInfo.component";

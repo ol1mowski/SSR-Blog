@@ -2,18 +2,22 @@ import Image, { StaticImageData } from "next/image";
 
 import s from "./Category-Component.component.module.scss";
 import CategoryWrapper from "../Category-Wrapper/Category-Wrapper.component";
+import Link from "next/link";
 
 type CategoryComponentProps = {
   header: string;
   description: string;
   img: StaticImageData;
+  id: string;
 };
 
 function CategoryComponent({
   header,
   description,
   img,
+  id,
 }: CategoryComponentProps) {
+  
   return (
     <CategoryWrapper>
       <div className={s.wrapper__header}>
@@ -30,7 +34,9 @@ function CategoryComponent({
         <p className={s.wrapper__description__p}>{description}</p>
       </div>
       <div className={s.wrapper__buttonWrapper}>
-        <button className={s.wrapper__buttonWrapper__btn}>Zobacz</button>
+        <Link href={`/category/${id}`}>
+          <button className={s.wrapper__buttonWrapper__btn}>Zobacz</button>
+        </Link>
       </div>
     </CategoryWrapper>
   );

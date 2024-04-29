@@ -5,6 +5,7 @@ import { useContext } from "react";
 import HamburgerClickContext from "@/store/HamburgerClickContext";
 import SearchSetion from "./SearchSection/SearchSetion";
 import Link from "next/link";
+import { fetchElements } from "@/utils/https";
 
 const Header = () => {
   const { isClick } = useContext(HamburgerClickContext);
